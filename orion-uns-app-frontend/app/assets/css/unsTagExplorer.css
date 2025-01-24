@@ -1,0 +1,11 @@
+.tree-node
+{
+    margin-left: 20px;
+    border: 1px solid transparent;
+}
+
+.tree-node:hover
+{
+    background-color: #17cefa;
+    border-color: #87cefa;
+}

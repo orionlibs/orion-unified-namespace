@@ -158,12 +158,19 @@
     
     
 	<dependencies>
+        <dependency>
+            <groupId>io.github.orionlibs</groupId>
+            <artifactId>orion-utilities</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+
         <!--<dependency>
             <groupId>io.github.orionlibs</groupId>
             <artifactId>orion-uns-model</artifactId>
             <version>0.0.1</version>
         </dependency>-->
-        
+
         
         <dependency>
 			<groupId>org.springframework.boot</groupId>
