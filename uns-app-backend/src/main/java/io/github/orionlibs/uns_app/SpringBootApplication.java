@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.util.MinimalPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import io.github.orionlibs.core.configuration.ConfigurationDAO;
-import io.github.orionlibs.core.registry.ServiceRegistry;
+import io.github.orionlibs.api.system.APISystemSpringConfiguration;
+import io.github.orionlibs.utilities.UtilitiesModuleRegistration;
 import java.util.TimeZone;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -26,13 +26,14 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @EnableWebMvc
 @EnableScheduling
 @ComponentScan(basePackages = {"io.github.orionlibs.api"})
-@Import({SpringConfiguration.class})
+@Import({SpringConfiguration.class, APISystemSpringConfiguration.class})
 public class SpringBootApplication extends SpringBootServletInitializer implements WebMvcConfigurer
 {
     public static void main(String[] args)
     {
         SpringApplication.run(SpringBootApplication.class, args);
         TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+        UtilitiesModuleRegistration.registerModule();
     }
 
 

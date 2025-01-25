@@ -1,5 +1,6 @@
 package io.github.orionlibs.api.system;
 
+import io.github.orionlibs.core.web.service.OrionWebService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/api/v1/system")
-public class SystemAPI
+public class SystemAPI extends OrionWebService
 {
     @GetMapping(value = "/version")
     public ResponseEntity<String> getSystemVersion()

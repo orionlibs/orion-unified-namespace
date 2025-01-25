@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentMap;
 
 public class ServiceRegistry
 {
-    public static final ConcurrentMap<Class<?>, Object> services;
+    private static final ConcurrentMap<Class<?>, Object> services;
 
     static
     {
