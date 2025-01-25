@@ -1,6 +1,5 @@
 package io.github.orionlibs.uns_app;
 
-import java.util.Arrays;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -13,10 +12,9 @@ import org.springframework.security.config.annotation.web.configurers.HeadersCon
 import org.springframework.security.config.annotation.web.configurers.SessionManagementConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.header.writers.ReferrerPolicyHeaderWriter.ReferrerPolicy;
 import org.springframework.security.web.header.writers.XXssProtectionHeaderWriter.HeaderValue;
-import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsUtils;
 
 @Configuration
 @EnableWebSecurity
@@ -25,24 +23,25 @@ public class SecurityConfig
     @Bean
     public Customizer<CsrfConfigurer<HttpSecurity>> csrfCustomizer()
     {
-        return csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-                        .ignoringRequestMatchers("/**");
+        return csrf -> csrf.disable();
+        /*return csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+                        .ignoringRequestMatchers("/**");*/
     }
 
 
     @Bean
     public Customizer<CorsConfigurer<HttpSecurity>> corsCustomizer()
     {
-        return cors -> cors.configurationSource(request -> {
+        return cors -> cors.disable();
+        /*return cors -> cors.configurationSource(request -> {
             CorsConfiguration config = new CorsConfiguration();
-            //config.setAllowedOrigins(Arrays.asList("http://localhost:8081", "null"));
-            config.setAllowedOrigins(Arrays.asList("*"));
-            config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "websocket", "ws"));
+            config.setAllowedOrigins(Arrays.asList("http://localhost:8081", "null"));
+            config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS", "websocket", "ws"));
             config.setAllowedHeaders(Arrays.asList("*"));
-            config.setAllowCredentials(true);
+            config.setAllowCredentials(false);
             config.setMaxAge(3600L);
             return config;
-        });
+        });*/
     }
 
 
@@ -102,8 +101,10 @@ public class SecurityConfig
     @Bean
     public Customizer<AuthorizeHttpRequestsConfigurer<HttpSecurity>.AuthorizationManagerRequestMatcherRegistry> authorizeHttpRequestsCustomizer()
     {
-        return http -> http.requestMatchers("/**").anonymous()
-                        .anyRequest().permitAll();
+        return http -> http.anyRequest().permitAll();
+        /*return http -> http.requestMatchers(CorsUtils::isPreFlightRequest).permitAll()
+                        .requestMatchers("/**").permitAll()
+                        .anyRequest().permitAll();*/
     }
 
 

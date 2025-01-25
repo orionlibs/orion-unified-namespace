@@ -12,6 +12,6 @@ public class SystemAPI
     @GetMapping(value = "/version")
     public ResponseEntity<String> getSystemVersion()
     {
-        return ResponseEntity.ok("{}");
+        return ResponseEntity.ok("{\"version\":\"0.0.1\"}");
     }
 }

@@ -5,20 +5,25 @@ import com.fasterxml.jackson.core.util.MinimalPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.HandlerAdapter;
 import org.springframework.web.servlet.HandlerMapping;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 @org.springframework.boot.autoconfigure.SpringBootApplication
 @EnableWebMvc
 @EnableScheduling
+@ComponentScan(basePackages = {"io.github.orionlibs.api"})
 //@Import({DashboardController.class})
-public class SpringBootApplication
+public class SpringBootApplication extends SpringBootServletInitializer implements WebMvcConfigurer
 {
     public static void main(String[] args)
     {
@@ -51,4 +56,15 @@ public class SpringBootApplication
                         .build()
                         .setDefaultPrettyPrinter(new MinimalPrettyPrinter());
     }
+
+
+    /*@Override
+    public void addCorsMappings(CorsRegistry registry)
+    {
+        registry.addMapping("/**")
+                        .allowedOrigins("http://localhost:8081", "null")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS", "websocket", "ws")
+                        .allowedHeaders("*")
+                        .allowCredentials(false);
+    }*/
 }

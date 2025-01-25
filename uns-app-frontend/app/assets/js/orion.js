@@ -264,7 +264,13 @@ let orionCommon =
 
     fetchComponentData : function(url, elementID)
     {
-        fetch(url)
+        fetch(url,
+        {
+            method: 'GET',
+            cache: "no-cache",
+            mode: "no-cors",//cors, no-cors, same-origin
+            credentials: "include"//include, same-origin, omit
+        })
         .then(response =>
         {
             if(!response.ok)
@@ -276,6 +282,7 @@ let orionCommon =
         })
         .then(data =>
         {
+        alert(JSON.stringify(data));
             orionCommon.updateComponent(elementID, data);
         })
         .catch(error =>
