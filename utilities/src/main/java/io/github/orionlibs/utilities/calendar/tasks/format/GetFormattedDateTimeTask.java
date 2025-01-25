@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.calendar.tasks.format;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.FormattedDateTime;
 import io.github.orionlibs.utilities.calendar.FormattedDateTime.FormattedDateTimeBuilder;
 import io.github.orionlibs.utilities.calendar.date.InvalidDateException;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import io.github.orionlibs.utilities.calendar.datetime.DateTimeRules;
 
-public class GetFormattedDateTimeTask extends Orion
+public class GetFormattedDateTimeTask
 {
     public static FormattedDateTime run(DateTime datetime) throws InvalidDateException
     {

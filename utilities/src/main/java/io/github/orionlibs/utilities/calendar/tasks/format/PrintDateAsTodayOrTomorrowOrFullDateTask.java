@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.calendar.tasks.format;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.date.Date;
 
-public class PrintDateAsTodayOrTomorrowOrFullDateTask extends Orion
+public class PrintDateAsTodayOrTomorrowOrFullDateTask
 {
     public static String run(Date date)
     {

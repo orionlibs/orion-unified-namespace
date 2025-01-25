@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.document.image;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -8,7 +7,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 
-public class ImageService extends OrionService
+public class ImageService
 {
     public static int getHeightBasedOnWidthToKeepAspectRatio(int actualWidth, int actualHeight, int targetWidth)
     {

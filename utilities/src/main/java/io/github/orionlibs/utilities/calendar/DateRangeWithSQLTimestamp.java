@@ -1,7 +1,6 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.object.CloningService;
+import io.github.orionlibs.core.object.CloningService;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,7 +12,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class DateRangeWithSQLTimestamp extends Orion
+public class DateRangeWithSQLTimestamp
 {
     private SQLTimestamp startDate;
     private SQLTimestamp endDate;

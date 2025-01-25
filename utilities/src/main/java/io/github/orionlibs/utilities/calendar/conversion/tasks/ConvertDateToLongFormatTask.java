@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.calendar.conversion.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
 import io.github.orionlibs.utilities.calendar.DateTokens;
 
-public class ConvertDateToLongFormatTask extends Orion
+public class ConvertDateToLongFormatTask
 {
     public static String run(DateTokens dateParts)
     {

@@ -1,6 +1,6 @@
 package io.github.orionlibs.utilities.web.app.header;
 
-import io.github.orionlibs.utilities.abstraction.OrionEnumeration;
+import io.github.orionlibs.core.abstraction.OrionEnumeration;
 
 public enum HTTPHeaderValue implements OrionEnumeration
 {

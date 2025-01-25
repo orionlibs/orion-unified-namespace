@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.calendar.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.date.DateRules;
 import io.github.orionlibs.utilities.calendar.date.InvalidDateException;
 
-public class TokeniseDateStringTask extends Orion
+public class TokeniseDateStringTask
 {
     public static String[] run(String date) throws InvalidDateException
     {

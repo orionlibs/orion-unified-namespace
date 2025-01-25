@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
@@ -11,7 +10,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 
-public class AddYearsToDatetimeTask extends Orion
+public class AddYearsToDatetimeTask
 {
     public static DateTime run(DateTime datetime, int numberOfYears, ZoneId zone)
     {

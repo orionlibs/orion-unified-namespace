@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.web.emailer.template;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.CalendarService;
-import io.github.orionlibs.utilities.uuid.UUIDSecurityService;
+import io.github.orionlibs.core.uuid.UUIDSecurityService;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InitialEmailTemplateParametersProvider extends Orion
+public class InitialEmailTemplateParametersProvider
 {
     public static Map<String, String> initialiseTemplateParameters()
     {

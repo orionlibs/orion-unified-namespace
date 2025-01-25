@@ -1,9 +1,8 @@
 package io.github.orionlibs.utilities.scripting.shell;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.operating_system.OperatingSystemType;
+import io.github.orionlibs.core.operating_system.OperatingSystemType;
 
-public class ShellCommand extends Orion
+public class ShellCommand
 {
     private OperatingSystemType operatingSystemType;
     private String[] commandParameters;

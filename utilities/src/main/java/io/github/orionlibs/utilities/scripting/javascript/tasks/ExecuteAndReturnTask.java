@@ -1,11 +1,10 @@
 package io.github.orionlibs.utilities.scripting.javascript.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-public class ExecuteAndReturnTask extends Orion
+public class ExecuteAndReturnTask
 {
     public static Object run(String JavaScriptCodeToExecute, String resultName, Object objectToCastResultTo)
     {

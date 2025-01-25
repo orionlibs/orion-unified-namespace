@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.cache;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-public class Cache<K, V> extends Orion
+public class Cache<K, V>
 {
     private ConcurrentMap<K, V> cache;
 

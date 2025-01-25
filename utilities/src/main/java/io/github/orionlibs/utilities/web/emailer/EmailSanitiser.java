@@ -1,9 +1,8 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.content.MIMEType;
+import io.github.orionlibs.core.content.MIMEType;
 
-class EmailSanitiser extends Orion
+class EmailSanitiser
 {
     static void sanitise(EmailData emailData)
     {

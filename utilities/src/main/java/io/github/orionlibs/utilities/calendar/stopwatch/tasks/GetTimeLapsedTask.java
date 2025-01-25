@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.calendar.stopwatch.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
 import io.github.orionlibs.utilities.calendar.stopwatch.Stopwatch;
-import io.github.orionlibs.utilities.exception.Assert;
-import io.github.orionlibs.utilities.string.StringsService;
+import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.core.string.StringsService;
 
-public class GetTimeLapsedTask extends Orion
+public class GetTimeLapsedTask
 {
     public String run(Stopwatch stopwatch)
     {

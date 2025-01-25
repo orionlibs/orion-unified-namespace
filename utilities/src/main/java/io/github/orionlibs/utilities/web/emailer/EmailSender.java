@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
 import jakarta.mail.MessagingException;
 import jakarta.mail.NoSuchProviderException;
 import jakarta.mail.SendFailedException;
 import jakarta.mail.Transport;
 
-public class EmailSender extends Orion
+public class EmailSender
 {
     public static boolean sendEmail(EmailSenderData senderData) throws EmailerException
     {

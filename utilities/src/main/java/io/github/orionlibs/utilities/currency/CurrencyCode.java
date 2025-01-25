@@ -1,6 +1,6 @@
 package io.github.orionlibs.utilities.currency;
 
-import io.github.orionlibs.utilities.abstraction.OrionEnumeration;
+import io.github.orionlibs.core.abstraction.OrionEnumeration;
 
 public enum CurrencyCode implements OrionEnumeration
 {

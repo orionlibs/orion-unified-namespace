@@ -1,9 +1,8 @@
 package io.github.orionlibs.utilities.scripting.shell.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import io.github.orionlibs.utilities.scripting.shell.ShellCommandResult;
-import io.github.orionlibs.utilities.utility.OrionUtils;
+import io.github.orionlibs.core.utility.OrionUtils;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,7 +10,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.List;
 
-public class RunShellPipelineTask extends Orion
+public class RunShellPipelineTask
 {
     public static ShellCommandResult run(List<ProcessBuilder> processBuilders) throws InterruptedException
     {

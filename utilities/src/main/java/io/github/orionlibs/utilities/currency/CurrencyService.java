@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.currency;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.currency.data_access.CurrenciesModel;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Currency;
 import java.util.Locale;
 
-public class CurrencyService extends OrionService
+public class CurrencyService
 {
     private static CurrenciesModel currencies;
     static

@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
 import java.util.Properties;
 
-class EmailConfigurator extends Orion
+class EmailConfigurator
 {
     static Properties getEmailParameters()
     {

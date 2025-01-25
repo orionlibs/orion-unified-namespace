@@ -1,8 +1,7 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.configuration.InMemoryConfigurationService;
-import io.github.orionlibs.utilities.file_system.file.FileService;
+import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.file_system.file.FileService;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -18,7 +17,7 @@ import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeMultipart;
 import org.apache.commons.io.FileUtils;
 
-public class EmailMessageBuilder extends Orion
+public class EmailMessageBuilder
 {
     static MimeMessage buildMessage(EmailMessageDependencies dependencies) throws EmailerException
     {

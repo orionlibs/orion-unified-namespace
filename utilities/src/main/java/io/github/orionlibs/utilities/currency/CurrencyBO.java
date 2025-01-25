@@ -2,7 +2,7 @@ package io.github.orionlibs.utilities.currency;
 
 import io.github.orionlibs.utilities.calendar.locale.LocaleService;
 import io.github.orionlibs.utilities.currency.data_access.CurrencyModel;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Currency;

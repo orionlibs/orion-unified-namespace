@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.calendar.datetime;
 
-import io.github.orionlibs.utilities.abstraction.OrionRule;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.date.Date;
 import io.github.orionlibs.utilities.calendar.date.DateRules;
 import io.github.orionlibs.utilities.calendar.time.Time;
 import io.github.orionlibs.utilities.calendar.time.TimeRules;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -14,7 +13,7 @@ import java.time.ZonedDateTime;
 import java.util.Arrays;
 import java.util.List;
 
-public class DateTimeRules extends OrionRule
+public class DateTimeRules
 {
     public static void isValidDateTime(String dateTimeString)
     {

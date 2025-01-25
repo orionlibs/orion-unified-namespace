@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.OrionValueObject;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +12,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class WeekPeriods extends OrionValueObject
+public class WeekPeriods
 {
     private List<WeekPeriod> weekPeriods;
 

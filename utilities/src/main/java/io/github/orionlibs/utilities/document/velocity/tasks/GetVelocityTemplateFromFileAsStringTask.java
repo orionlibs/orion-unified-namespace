@@ -1,14 +1,13 @@
 package io.github.orionlibs.utilities.document.velocity.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.io.StringWriter;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
 
-public class GetVelocityTemplateFromFileAsStringTask extends Orion
+public class GetVelocityTemplateFromFileAsStringTask
 {
     public static String run(VelocityEngine velocityEngine, VelocityContext velocityContext, String velocityTemplateFilePath) throws ResourceNotFoundException, ParseErrorException
     {

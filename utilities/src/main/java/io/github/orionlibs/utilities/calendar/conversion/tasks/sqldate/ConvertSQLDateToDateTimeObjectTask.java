@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.calendar.conversion.tasks.sqldate;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.date.Date;
 import io.github.orionlibs.utilities.calendar.date.DateRules;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class ConvertSQLDateToDateTimeObjectTask extends Orion
+public class ConvertSQLDateToDateTimeObjectTask
 {
     public static DateTime run(String SQLDate)
     {

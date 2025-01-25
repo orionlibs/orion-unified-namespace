@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import jakarta.mail.Transport;
 // import com.sun.mail.smtp.SMTPTransport;
 import jakarta.mail.internet.MimeMessage;
@@ -11,7 +10,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class EmailSenderData extends Orion
+public class EmailSenderData
 {
     private Transport transport;
     private MimeMessage messageToSend;

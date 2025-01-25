@@ -1,11 +1,10 @@
 package io.github.orionlibs.utilities.scripting.javascript;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.scripting.javascript.tasks.ExecuteAndReturnTask;
 import io.github.orionlibs.utilities.scripting.javascript.tasks.ExecuteTask;
 import javax.script.ScriptException;
 
-public class JavaScriptEngineService extends OrionService
+public class JavaScriptEngineService
 {
     public static Object execute(String JavaScriptCodeToExecute) throws ScriptException
     {

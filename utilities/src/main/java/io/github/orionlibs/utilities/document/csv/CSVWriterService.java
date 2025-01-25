@@ -1,17 +1,16 @@
 package io.github.orionlibs.utilities.document.csv;
 
 import com.opencsv.CSVWriter;
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.document.csv.tasks.BuildCSVBodyTask;
 import io.github.orionlibs.utilities.document.csv.tasks.BuildCSVHeaderTask;
-import io.github.orionlibs.utilities.utility.OrionUtils;
+import io.github.orionlibs.core.utility.OrionUtils;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CSVWriterService extends OrionService
+public class CSVWriterService
 {
     private CSVWriter writer;
     private String header;

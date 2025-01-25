@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.calendar.tasks.format;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.date.Date;
 import io.github.orionlibs.utilities.calendar.date.InvalidDateException;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 
-public class PrintDateAsTodayOrTomorrowOrFullDateTimeTask extends Orion
+public class PrintDateAsTodayOrTomorrowOrFullDateTimeTask
 {
     public static String run(DateTime datetime, boolean printYear) throws InvalidDateException
     {

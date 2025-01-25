@@ -1,8 +1,6 @@
 package io.github.orionlibs.utilities.web.app.pages;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-
-public class OrionPageTitle extends Orion
+public class OrionPageTitle
 {
     public static final String error400 = "Orion - Error";
     public static final String error403 = "Orion - Error";

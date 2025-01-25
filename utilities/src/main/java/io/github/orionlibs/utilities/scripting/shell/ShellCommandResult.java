@@ -1,8 +1,6 @@
 package io.github.orionlibs.utilities.scripting.shell;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-
-public class ShellCommandResult extends Orion
+public class ShellCommandResult
 {
     private boolean errorExists;
     private String result;

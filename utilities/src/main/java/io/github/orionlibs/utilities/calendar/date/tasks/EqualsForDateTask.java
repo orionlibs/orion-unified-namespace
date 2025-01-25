@@ -1,9 +1,8 @@
 package io.github.orionlibs.utilities.calendar.date.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.date.Date;
 
-public class EqualsForDateTask extends Orion
+public class EqualsForDateTask
 {
     public static boolean run(Date date, Object object)
     {

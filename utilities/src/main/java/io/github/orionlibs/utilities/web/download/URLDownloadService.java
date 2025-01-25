@@ -1,8 +1,6 @@
 package io.github.orionlibs.utilities.web.download;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
-
-public class URLDownloadService extends OrionService
+public class URLDownloadService
 {
     public static void main(String[] args)
     {

@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar.datetime;
 
-import io.github.orionlibs.utilities.abstraction.OrionTemporal;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.SQLTimestamp;
@@ -10,7 +9,7 @@ import io.github.orionlibs.utilities.calendar.date.InvalidDateException;
 import io.github.orionlibs.utilities.calendar.time.InvalidTimeException;
 import io.github.orionlibs.utilities.calendar.time.Time;
 import io.github.orionlibs.utilities.calendar.time.TimeRules;
-import io.github.orionlibs.utilities.object.CloningService;
+import io.github.orionlibs.core.object.CloningService;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -20,7 +19,7 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 
-public class DateTime extends OrionTemporal implements Cloneable
+public class DateTime implements Cloneable
 {
     private static final ZoneId DefaultZone = ZoneId.of("UTC");
     private Date date;

@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.document.json.tasks;
 
 import com.google.gson.Gson;
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.document.json.JSONObject;
-import io.github.orionlibs.utilities.exception.Assert;
-import io.github.orionlibs.utilities.exception.InvalidArgumentException;
+import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.core.exception.InvalidArgumentException;
 
-public class ConvertJSONObjectToStringTask extends Orion
+public class ConvertJSONObjectToStringTask
 {
     public static String run(JSONObject jsonObject)
     {

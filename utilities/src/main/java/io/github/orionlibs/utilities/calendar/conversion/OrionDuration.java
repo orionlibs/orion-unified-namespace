@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.calendar.conversion;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import lombok.Getter;
 
 @Getter
-public class OrionDuration extends Orion
+public class OrionDuration
 {
     private long totalSeconds = 0L;
     private long years = 0L;

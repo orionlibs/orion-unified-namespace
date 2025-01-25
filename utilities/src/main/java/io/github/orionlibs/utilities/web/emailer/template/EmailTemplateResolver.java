@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.web.emailer.template;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.configuration.InMemoryConfigurationService;
-import io.github.orionlibs.utilities.cryptology.encoding.base64.Base64EncodingService;
+import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.cryptology.encoding.base64.Base64EncodingService;
 
-public class EmailTemplateResolver extends Orion
+public class EmailTemplateResolver
 {
     public static String resolve(String velocityTemplateID)
     {

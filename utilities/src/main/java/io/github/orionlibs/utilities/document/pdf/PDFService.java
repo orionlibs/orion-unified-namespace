@@ -1,8 +1,6 @@
 package io.github.orionlibs.utilities.document.pdf;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
-
-public class PDFService extends OrionService
+public class PDFService
 {
     /*
      * public static void main(String[] args) { File file = new

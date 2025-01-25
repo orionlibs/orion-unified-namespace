@@ -1,6 +1,6 @@
 package io.github.orionlibs.utilities.calendar.date;
 
-import io.github.orionlibs.utilities.abstraction.OrionUncheckedException;
+import io.github.orionlibs.core.abstraction.OrionUncheckedException;
 
 public class InvalidDateException extends OrionUncheckedException
 {

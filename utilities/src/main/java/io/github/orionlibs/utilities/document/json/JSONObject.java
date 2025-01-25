@@ -1,9 +1,8 @@
 package io.github.orionlibs.utilities.document.json;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import java.util.Map;
 
-public class JSONObject extends Orion
+public class JSONObject
 {
     private Map<?, ?> JSONMapData;
     private String JSONStringData;

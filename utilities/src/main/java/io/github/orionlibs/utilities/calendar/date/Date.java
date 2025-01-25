@@ -1,16 +1,15 @@
 package io.github.orionlibs.utilities.calendar.date;
 
-import io.github.orionlibs.utilities.abstraction.OrionTemporal;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.DateTokens;
-import io.github.orionlibs.utilities.exception.Assert;
-import io.github.orionlibs.utilities.object.CloningService;
+import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.core.object.CloningService;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.ZoneId;
 
-public class Date extends OrionTemporal implements Cloneable
+public class Date implements Cloneable
 {
     private int year;
     private int month;

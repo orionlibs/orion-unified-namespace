@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.OrionValueObject;
 import io.github.orionlibs.utilities.calendar.date.Date;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import io.github.orionlibs.utilities.calendar.time.Time;
@@ -16,7 +15,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class WeekPeriod extends OrionValueObject
+public class WeekPeriod
 {
     private String startDate;
     private String endDate;

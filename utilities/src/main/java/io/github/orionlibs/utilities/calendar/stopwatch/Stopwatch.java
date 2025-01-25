@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.calendar.stopwatch;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.stopwatch.tasks.GetTimeLapsedTask;
 import io.github.orionlibs.utilities.calendar.stopwatch.tasks.GetTimeLapsedWithNanosecondsTask;
 
-public class Stopwatch extends Orion
+public class Stopwatch
 {
     private long totalMillisecondsElapsed;
     private long totalSecondsElapsed;

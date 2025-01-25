@@ -1,15 +1,14 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.date.Date;
 import io.github.orionlibs.utilities.calendar.date.DateRules;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import io.github.orionlibs.utilities.calendar.datetime.DateTimeRules;
-import io.github.orionlibs.utilities.exception.InvalidArgumentException;
+import io.github.orionlibs.core.exception.InvalidArgumentException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class GetNumberOfMonthDaysTask extends Orion
+public class GetNumberOfMonthDaysTask
 {
     public static int run(Date date) throws InvalidArgumentException
     {

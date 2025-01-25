@@ -1,15 +1,14 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks.difference;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
 import io.github.orionlibs.utilities.calendar.conversion.OrionDuration;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
-import io.github.orionlibs.utilities.exception.Assert;
-import io.github.orionlibs.utilities.exception.InvalidArgumentException;
+import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.core.exception.InvalidArgumentException;
 import java.time.Duration;
 import java.util.List;
 
-public class GetDifferenceAsListBetweenTwoDateTimesBasedOnChronoUnitsTask extends Orion
+public class GetDifferenceAsListBetweenTwoDateTimesBasedOnChronoUnitsTask
 {
     private long numberOfYears = 0L;
     private long numberOfMonths = 0L;

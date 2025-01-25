@@ -1,9 +1,8 @@
 package io.github.orionlibs.utilities.calendar.time.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.time.Time;
 
-public class EqualsForTimeTask extends Orion
+public class EqualsForTimeTask
 {
     public static boolean run(Time time, Object object)
     {

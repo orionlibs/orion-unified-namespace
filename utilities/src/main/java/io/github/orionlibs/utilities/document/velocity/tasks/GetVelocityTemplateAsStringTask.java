@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.document.velocity.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.io.StringWriter;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.exception.ParseErrorException;
 
-public class GetVelocityTemplateAsStringTask extends Orion
+public class GetVelocityTemplateAsStringTask
 {
     public static String run(VelocityEngine velocityEngine, VelocityContext velocityContext, String velocityTemplateName, String velocityTemplate) throws ParseErrorException
     {

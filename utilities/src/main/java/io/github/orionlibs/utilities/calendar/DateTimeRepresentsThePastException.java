@@ -1,6 +1,6 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.OrionCheckedException;
+import io.github.orionlibs.core.abstraction.OrionCheckedException;
 
 public class DateTimeRepresentsThePastException extends OrionCheckedException
 {

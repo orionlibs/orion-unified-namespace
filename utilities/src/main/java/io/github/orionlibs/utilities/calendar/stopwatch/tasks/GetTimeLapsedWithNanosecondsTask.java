@@ -1,11 +1,10 @@
 package io.github.orionlibs.utilities.calendar.stopwatch.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
 import io.github.orionlibs.utilities.calendar.stopwatch.Stopwatch;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 
-public class GetTimeLapsedWithNanosecondsTask extends Orion
+public class GetTimeLapsedWithNanosecondsTask
 {
     public static String run(Stopwatch stopwatch, String timeElapsed)
     {

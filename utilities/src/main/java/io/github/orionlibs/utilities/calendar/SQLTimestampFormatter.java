@@ -1,8 +1,7 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
-import io.github.orionlibs.utilities.string.StringsService;
+import io.github.orionlibs.core.string.StringsService;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,7 +13,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class SQLTimestampFormatter extends Orion
+public class SQLTimestampFormatter
 {
     private SQLTimestamp timestamp;
 

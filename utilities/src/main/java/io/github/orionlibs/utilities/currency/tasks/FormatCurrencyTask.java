@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.currency.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.Locale;
 
-public class FormatCurrencyTask extends Orion
+public class FormatCurrencyTask
 {
     public static String run(BigDecimal amount, Locale locale)// throws CurrencyFormatException
     {

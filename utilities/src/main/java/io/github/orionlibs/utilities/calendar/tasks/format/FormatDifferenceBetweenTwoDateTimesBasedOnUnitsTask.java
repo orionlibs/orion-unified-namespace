@@ -1,6 +1,6 @@
 package io.github.orionlibs.utilities.calendar.tasks.format;
 
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 
 public class FormatDifferenceBetweenTwoDateTimesBasedOnUnitsTask
 {

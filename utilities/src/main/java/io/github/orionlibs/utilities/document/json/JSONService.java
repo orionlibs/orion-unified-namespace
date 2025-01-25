@@ -5,14 +5,12 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import io.github.orionlibs.utilities.abstraction.OrionService;
-import io.github.orionlibs.utilities.data.structure.map.type.OrionHashMap;
 import io.github.orionlibs.utilities.document.json.tasks.ConvertJSONObjectToMapTask;
 import io.github.orionlibs.utilities.document.json.tasks.ConvertJSONObjectToStringTask;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.util.Map;
 
-public class JSONService extends OrionService
+public class JSONService
 {
     public static String convertObjectToJSON(Object objectToConvert)
     {
@@ -40,7 +38,7 @@ public class JSONService extends OrionService
     @SuppressWarnings("unchecked")
     public static Map<Object, Object> convertJSONToMap(String JSONData)
     {
-        return (Map<Object, Object>)convertJSONToObject(JSONData, OrionHashMap.class);
+        return (Map<Object, Object>)convertJSONToObject(JSONData, Map.class);
     }
 
 
@@ -99,7 +97,7 @@ public class JSONService extends OrionService
     public static JSONObject convertJSONToJSONObject(String JSONData)
     {
         Assert.notEmpty(JSONData, "The given JSONData is null/empty.");
-        Map<Object, Object> JSONMap = (Map<Object, Object>)convertJSONToObject(JSONData, OrionHashMap.class);
+        Map<Object, Object> JSONMap = (Map<Object, Object>)convertJSONToObject(JSONData, Map.class);
         return new JSONObject(JSONMap, JSONData);
     }
 

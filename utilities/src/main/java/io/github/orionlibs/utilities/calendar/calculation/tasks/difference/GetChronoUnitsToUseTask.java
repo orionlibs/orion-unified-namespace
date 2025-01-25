@@ -1,13 +1,11 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks.difference;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.data.structure.list.ListService;
-import io.github.orionlibs.utilities.data.structure.list.OrionList;
-import io.github.orionlibs.utilities.data.structure.list.type.OrionArrayList;
+import io.github.orionlibs.core.utility.OrionUtils;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class GetChronoUnitsToUseTask extends Orion
+class GetChronoUnitsToUseTask
 {
     @SuppressWarnings("unchecked")
     static List<String> run(String units, String[] unitsToUse)
@@ -15,9 +13,9 @@ class GetChronoUnitsToUseTask extends Orion
 
         if(!units.isEmpty())
         {
-            OrionList<String> unitsToUseList = OrionArrayList.<String>of(unitsToUse);
-            OrionList<String> unitsFromInputToUse = OrionArrayList.<String>of(units.split(""));
-            return ListService.<String>getIntersection(unitsToUseList, unitsFromInputToUse).getAsList();
+            List<String> unitsToUseList = new ArrayList<>(Arrays.asList(unitsToUse));
+            List<String> unitsFromInputToUse = new ArrayList<>(Arrays.asList(units.split("")));
+            return OrionUtils.getIntersection(unitsToUseList, unitsFromInputToUse);
         }
         else
         {

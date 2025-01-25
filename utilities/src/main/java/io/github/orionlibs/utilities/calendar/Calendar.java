@@ -1,7 +1,6 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.OrionConstants;
-import io.github.orionlibs.utilities.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.abstraction.OrionConstants;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,6 +39,7 @@ public class Calendar extends OrionConstants
     public static final String fullDatetimePatternYearLast = "dd-MM-yyyy'T'HH:mm:ss.SSS";
     public static final String fullDatetimePatternYearLastWithSpaceBetweenDateAndTime = "dd-MM-yyyy HH:mm:ss.SSS";
     public static final String fullDatetimePatternYearLastWithCommaBetweenDateAndTime = "dd/MM/yyyy, HH:mm";
+
     static
     {
         initialiseDayNumberToNameMapper();
@@ -47,9 +47,7 @@ public class Calendar extends OrionConstants
         initialiseMonthAbbreviatedNameToNumberMapper();
         initialiseMonthNumberToFullNameMapper();
         initialiseMonthFullNameToNumberMapper();
-        InMemoryConfigurationService.registerClassStaticVariables(Calendar.class);
     }
-
 
     private static void initialiseMonthFullNameToNumberMapper()
     {

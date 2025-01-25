@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.WeekPeriod;
 import io.github.orionlibs.utilities.calendar.WeekPeriods;
@@ -9,7 +8,7 @@ import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetAllWeeksOfTheLastNWeeksAsPairsOfStartAndEndDateWithFirstDayOfWeekBeingMondayTask extends Orion
+public class GetAllWeeksOfTheLastNWeeksAsPairsOfStartAndEndDateWithFirstDayOfWeekBeingMondayTask
 {
     public static WeekPeriods run(int numberOfWeeksToReturn)
     {

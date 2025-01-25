@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import jakarta.mail.Session;
 import lombok.Builder;
 import lombok.Getter;
@@ -9,7 +8,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-class EmailMessageDependencies extends Orion
+class EmailMessageDependencies
 {
     private Session emailSession;
     private String emailSender;

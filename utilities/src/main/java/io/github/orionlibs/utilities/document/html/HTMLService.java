@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.document.html;
 
 import com.googlecode.htmlcompressor.compressor.HtmlCompressor;
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import org.jsoup.Jsoup;
 
-public class HTMLService extends OrionService
+public class HTMLService
 {
     public static String minifyHTMLContent(String contentInHTML)
     {

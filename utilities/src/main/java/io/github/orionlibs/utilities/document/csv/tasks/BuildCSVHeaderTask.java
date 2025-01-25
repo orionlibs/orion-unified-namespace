@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.document.csv.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.document.csv.CSVWriterService;
 import java.util.List;
 
-public class BuildCSVHeaderTask extends Orion
+public class BuildCSVHeaderTask
 {
     public static String run(List<String> headerColumnNames)
     {

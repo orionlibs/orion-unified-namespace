@@ -1,15 +1,14 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks.difference;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import io.github.orionlibs.utilities.calendar.datetime.DateTimeRules;
-import io.github.orionlibs.utilities.exception.InvalidArgumentException;
+import io.github.orionlibs.core.exception.InvalidArgumentException;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 
-public class GetDifferenceBetweenTwoDateTimesInMillisecondsTask extends Orion
+public class GetDifferenceBetweenTwoDateTimesInMillisecondsTask
 {
     public static long run(DateTime dateTime1, DateTime dateTime2) throws InvalidArgumentException
     {

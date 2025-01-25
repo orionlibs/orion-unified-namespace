@@ -1,9 +1,8 @@
 package io.github.orionlibs.utilities.calendar.tasks.format;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
 
-public class GetDurationInSecondsRoundedUpToTheClosestNMinuteMarkTask extends Orion
+public class GetDurationInSecondsRoundedUpToTheClosestNMinuteMarkTask
 {
     public static long run(int numberOfMinutes, long durationInSeconds)
     {

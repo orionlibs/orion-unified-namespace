@@ -1,7 +1,6 @@
 package io.github.orionlibs.utilities.document.xml.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -16,7 +15,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 
-public class SaveXMLToFileTask extends Orion
+public class SaveXMLToFileTask
 {
     public static void run(Document XMLDocument, File XMLFilePath) throws TransformerFactoryConfigurationError, TransformerConfigurationException, IllegalArgumentException, TransformerException, IOException
     {

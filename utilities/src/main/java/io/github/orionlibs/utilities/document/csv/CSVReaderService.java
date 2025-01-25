@@ -2,9 +2,8 @@ package io.github.orionlibs.utilities.document.csv;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-import io.github.orionlibs.utilities.abstraction.OrionService;
-import io.github.orionlibs.utilities.file_system.file.FileService;
-import io.github.orionlibs.utilities.utility.OrionUtils;
+import io.github.orionlibs.core.file_system.file.FileService;
+import io.github.orionlibs.core.utility.OrionUtils;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.io.IOUtils;
 
-public class CSVReaderService extends OrionService
+public class CSVReaderService
 {
     private Reader reader;
     private CSVReader csvReader;

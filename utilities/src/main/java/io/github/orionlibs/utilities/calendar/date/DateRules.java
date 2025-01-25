@@ -1,14 +1,13 @@
 package io.github.orionlibs.utilities.calendar.date;
 
-import io.github.orionlibs.utilities.abstraction.OrionRule;
-import io.github.orionlibs.utilities.exception.Assert;
-import io.github.orionlibs.utilities.exception.InvalidArgumentException;
+import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.core.exception.InvalidArgumentException;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.Arrays;
 
-public class DateRules extends OrionRule
+public class DateRules
 {
     public static void isValidSQLDate(String date)
     {

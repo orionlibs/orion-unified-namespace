@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.calendar.datetime;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.calendar.datetime.tasks.EqualsForDateTimeTask;
 import io.github.orionlibs.utilities.calendar.datetime.tasks.HashCodeForDateTimeTask;
 
-class DateTimeInternalService extends OrionService
+class DateTimeInternalService
 {
     public static int hashCode(DateTime dateTime)
     {

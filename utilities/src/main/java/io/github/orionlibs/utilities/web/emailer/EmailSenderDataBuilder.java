@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
 import jakarta.mail.NoSuchProviderException;
 import jakarta.mail.Session;
 import jakarta.mail.internet.MimeMessage;
 
-class EmailSenderDataBuilder extends Orion
+class EmailSenderDataBuilder
 {
     static EmailSenderData build(Session emailSession, MimeMessage messageToSend) throws NoSuchProviderException
     {

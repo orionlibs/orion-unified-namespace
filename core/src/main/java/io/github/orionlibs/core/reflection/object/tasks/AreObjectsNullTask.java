@@ -1,0 +1,15 @@
+package io.github.orionlibs.core.reflection.object.tasks;
+
+import java.util.Arrays;
+
+public class AreObjectsNullTask
+{
+    public static boolean run(Object... objects)
+    {
+        if(objects != null && objects.length > 0)
+        {
+            return !Arrays.stream(objects).anyMatch(object -> object != null);
+        }
+        return true;
+    }
+}

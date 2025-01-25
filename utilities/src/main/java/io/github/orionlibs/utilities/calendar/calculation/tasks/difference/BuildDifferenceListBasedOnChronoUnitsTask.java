@@ -1,9 +1,8 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks.difference;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import java.util.List;
 
-class BuildDifferenceListBasedOnChronoUnitsTask extends Orion
+class BuildDifferenceListBasedOnChronoUnitsTask
 {
     static Long[] run(DateTimeDifference dateTimeDifference)
     {

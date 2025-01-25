@@ -1,18 +1,17 @@
 package io.github.orionlibs.utilities.scripting.shell.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.exception.Assert;
-import io.github.orionlibs.utilities.operating_system.OperatingSystemType;
+import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.core.operating_system.OperatingSystemType;
 import io.github.orionlibs.utilities.scripting.shell.ShellCommand;
 import io.github.orionlibs.utilities.scripting.shell.ShellCommandResult;
-import io.github.orionlibs.utilities.utility.OrionUtils;
+import io.github.orionlibs.core.utility.OrionUtils;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.stream.IntStream;
 
-public class RunCommandTask extends Orion
+public class RunCommandTask
 {
     public static ShellCommandResult run(ShellCommand command) throws InterruptedException
     {

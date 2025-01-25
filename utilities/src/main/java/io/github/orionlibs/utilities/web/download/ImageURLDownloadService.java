@@ -1,11 +1,10 @@
 package io.github.orionlibs.utilities.web.download;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
-import io.github.orionlibs.utilities.runnable.OrionJob;
+import io.github.orionlibs.core.runnable.OrionJob;
 import java.io.IOException;
 import org.jsoup.Jsoup;
 
-public class ImageURLDownloadService extends OrionService implements OrionJob
+public class ImageURLDownloadService implements OrionJob
 {
     /*public static void main(String[] args)
     {

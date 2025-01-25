@@ -1,7 +1,6 @@
 package io.github.orionlibs.utilities.document.excel;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
-import io.github.orionlibs.utilities.utility.OrionUtils;
+import io.github.orionlibs.core.utility.OrionUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -11,7 +10,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelReaderService extends OrionService
+public class ExcelReaderService
 {
     private XSSFWorkbook excelReader;
     private String sheetName;

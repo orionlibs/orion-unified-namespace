@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.document.velocity.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import java.util.Map;
 import org.apache.velocity.VelocityContext;
 
-public class BuildVelocityTemplateContextTask extends Orion
+public class BuildVelocityTemplateContextTask
 {
     public static VelocityContext run()
     {

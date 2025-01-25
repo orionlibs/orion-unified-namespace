@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.document.json.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.document.json.JSONObject;
 import io.github.orionlibs.utilities.document.json.JSONService;
-import io.github.orionlibs.utilities.exception.Assert;
-import io.github.orionlibs.utilities.exception.InvalidArgumentException;
+import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.core.exception.InvalidArgumentException;
 import java.util.Map;
 
-public class ConvertJSONObjectToMapTask extends Orion
+public class ConvertJSONObjectToMapTask
 {
     public static Map<?, ?> run(JSONObject jsonObject)
     {

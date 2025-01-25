@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar.tasks.format;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
@@ -14,7 +13,7 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FormatZonedDateTimeOrDateTimeOrDateOrTimeTask extends Orion
+public class FormatZonedDateTimeOrDateTimeOrDateOrTimeTask
 {
     private List<String> formattersAlreadyTried;
 

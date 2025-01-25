@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.Calendar;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.util.TimeZone;
 
-public class GetDaylightSavingsHoursToAddTask extends Orion
+public class GetDaylightSavingsHoursToAddTask
 {
     public static int run(ZoneId zoneID)
     {

@@ -1,14 +1,13 @@
 package io.github.orionlibs.utilities.calendar.time;
 
-import io.github.orionlibs.utilities.abstraction.OrionTemporal;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.CalendarService;
-import io.github.orionlibs.utilities.object.CloningService;
+import io.github.orionlibs.core.object.CloningService;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class Time extends OrionTemporal implements Cloneable
+public class Time implements Cloneable
 {
     private int hours;
     private int minutes;

@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks.difference;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import java.util.List;
 import lombok.Builder;
 import lombok.Getter;
@@ -9,7 +8,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-class DateTimeDifference extends Orion
+class DateTimeDifference
 {
     @Builder.Default
     private long numberOfYears = 0L;

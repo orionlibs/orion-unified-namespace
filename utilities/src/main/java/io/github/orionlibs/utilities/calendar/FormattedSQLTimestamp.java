@@ -1,8 +1,6 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-
-public class FormattedSQLTimestamp extends Orion
+public class FormattedSQLTimestamp
 {
     public static void setupFormattedDateTime(SQLTimestamp timestamp)
     {

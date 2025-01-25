@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar.locale;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.calendar.locale.data_access.LocaleModel;
 import io.github.orionlibs.utilities.calendar.locale.data_access.LocalesModel;
 import java.text.MessageFormat;
@@ -12,7 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import lombok.Getter;
 
-public class LocaleService extends OrionService
+public class LocaleService
 {
     private static LocalesModel locales;
     static

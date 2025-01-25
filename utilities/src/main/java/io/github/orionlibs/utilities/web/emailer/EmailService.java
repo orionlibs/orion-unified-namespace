@@ -1,11 +1,10 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
-import io.github.orionlibs.utilities.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
 import io.github.orionlibs.utilities.web.emailer.template.InitialEmailTemplateParametersProvider;
 import java.util.Map;
 
-public class EmailService extends OrionService
+public class EmailService
 {
     public static EmailData prepareEmailFromTemplate(Map<String, String> templateParameters, String velocityTemplateID, String velocityTemplateName, String emailSubject, String emailRecipient, String emailSender, String emailSenderName)
     {

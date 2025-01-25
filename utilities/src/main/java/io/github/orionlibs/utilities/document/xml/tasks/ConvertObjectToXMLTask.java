@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.document.xml.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.io.File;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 
-public class ConvertObjectToXMLTask extends Orion
+public class ConvertObjectToXMLTask
 {
     public static void run(Object objectToConvert, File XMLFile) throws JAXBException
     {

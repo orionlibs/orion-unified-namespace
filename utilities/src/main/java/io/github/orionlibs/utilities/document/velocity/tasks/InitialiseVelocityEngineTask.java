@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.document.velocity.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.log.NullLogChute;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
 
-public class InitialiseVelocityEngineTask extends Orion
+public class InitialiseVelocityEngineTask
 {
     public static VelocityEngine run()
     {

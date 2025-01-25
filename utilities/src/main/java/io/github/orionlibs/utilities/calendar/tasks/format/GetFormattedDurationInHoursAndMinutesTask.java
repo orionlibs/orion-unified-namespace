@@ -1,8 +1,6 @@
 package io.github.orionlibs.utilities.calendar.tasks.format;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-
-public class GetFormattedDurationInHoursAndMinutesTask extends Orion
+public class GetFormattedDurationInHoursAndMinutesTask
 {
     public static String run(int numberOfMinutes)
     {

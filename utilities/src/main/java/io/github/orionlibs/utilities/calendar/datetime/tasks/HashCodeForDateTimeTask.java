@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.calendar.datetime.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import io.github.orionlibs.utilities.calendar.datetime.DateTimeRules;
 
-public class HashCodeForDateTimeTask extends Orion
+public class HashCodeForDateTimeTask
 {
     public static int run(DateTime dateTime)
     {

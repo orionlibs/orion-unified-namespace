@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.calendar.time;
 
-import io.github.orionlibs.utilities.abstraction.OrionRule;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalTime;
 import java.util.Arrays;
 
-public class TimeRules extends OrionRule
+public class TimeRules
 {
     public static void isValid(int hours, int minutes, int seconds, int milliseconds)
     {

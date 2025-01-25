@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.OrionManager;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.util.Properties;
 import jakarta.mail.NoSuchProviderException;
 import jakarta.mail.Session;
 import jakarta.mail.internet.MimeMessage;
 
-class EmailManager extends OrionManager
+class EmailManager
 {
     static boolean sendEmail(EmailData emailData) throws EmailerException
     {

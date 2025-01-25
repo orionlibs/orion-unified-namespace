@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.document.xml;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.document.xml.tasks.ConvertObjectToXMLTask;
 import io.github.orionlibs.utilities.document.xml.tasks.ConvertXMLToObjectTask;
 import io.github.orionlibs.utilities.document.xml.tasks.OpenXMLFileTask;
@@ -15,7 +14,7 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-public class XMLService extends OrionService
+public class XMLService
 {
     public static Document openXMLFile(String XMLFilePath) throws JAXBException, ParserConfigurationException, SAXException, IOException
     {

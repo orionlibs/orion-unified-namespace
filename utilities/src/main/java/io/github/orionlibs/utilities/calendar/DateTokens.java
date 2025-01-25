@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,7 +11,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class DateTokens extends Orion
+public class DateTokens
 {
     private int days;
     private int month;

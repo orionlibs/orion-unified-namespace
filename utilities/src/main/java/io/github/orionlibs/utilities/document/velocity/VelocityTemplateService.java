@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.document.velocity;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.document.velocity.tasks.BuildVelocityTemplateContextTask;
 import io.github.orionlibs.utilities.document.velocity.tasks.GetVelocityTemplateAsStringTask;
 import io.github.orionlibs.utilities.document.velocity.tasks.GetVelocityTemplateFromFileAsStringTask;
@@ -11,7 +10,7 @@ import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
 
-public class VelocityTemplateService extends OrionService
+public class VelocityTemplateService
 {
     public static VelocityEngine initialiseVelocityEngine()
     {

@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.calendar.calculation.tasks.AddDaysToDatetimeTask;
 import io.github.orionlibs.utilities.calendar.calculation.tasks.AddWorkingDaysToDatetimeTask;
 import io.github.orionlibs.utilities.calendar.calculation.tasks.AddYearsToDatetimeTask;
@@ -71,7 +70,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.TimeZone;
 
-public class CalendarService extends OrionService
+public class CalendarService
 {
     //formatting methods
     public static FormattedDateTime getFormattedDateTime(DateTime datetime) throws InvalidDateException

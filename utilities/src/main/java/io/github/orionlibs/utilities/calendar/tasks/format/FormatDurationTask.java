@@ -1,10 +1,9 @@
 package io.github.orionlibs.utilities.calendar.tasks.format;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.FormattedDateTime;
 import io.github.orionlibs.utilities.calendar.conversion.OrionDuration;
 
-public class FormatDurationTask extends Orion
+public class FormatDurationTask
 {
     public static FormattedDateTime run(OrionDuration duration)
     {

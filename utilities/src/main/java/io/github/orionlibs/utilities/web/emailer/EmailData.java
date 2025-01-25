@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,7 +7,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class EmailData extends Orion
+public class EmailData
 {
     private String emailID;
     private String emailSender;

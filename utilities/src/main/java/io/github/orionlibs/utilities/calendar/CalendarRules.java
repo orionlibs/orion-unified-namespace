@@ -1,13 +1,12 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.abstraction.OrionRule;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 
-public class CalendarRules extends OrionRule
+public class CalendarRules
 {
     public static void isValid(Instant date)
     {

@@ -1,12 +1,11 @@
 package io.github.orionlibs.utilities.scripting.shell;
 
-import io.github.orionlibs.utilities.abstraction.OrionService;
 import io.github.orionlibs.utilities.scripting.shell.tasks.RunCommandTask;
 import io.github.orionlibs.utilities.scripting.shell.tasks.RunShellPipelineTask;
 import java.io.File;
 import java.util.List;
 
-public class ShellService extends OrionService
+public class ShellService
 {
     public static ShellCommandResult runCommand(ShellCommand command) throws InterruptedException
     {

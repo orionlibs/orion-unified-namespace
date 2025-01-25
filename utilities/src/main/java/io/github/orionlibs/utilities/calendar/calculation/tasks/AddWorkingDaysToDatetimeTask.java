@@ -1,6 +1,5 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
@@ -9,7 +8,7 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
-public class AddWorkingDaysToDatetimeTask extends Orion
+public class AddWorkingDaysToDatetimeTask
 {
     public static DateTime run(DateTime datetime, long numberOfDays, ZoneId zone)
     {

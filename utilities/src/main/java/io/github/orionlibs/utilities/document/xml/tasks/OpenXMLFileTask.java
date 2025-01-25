@@ -1,7 +1,6 @@
 package io.github.orionlibs.utilities.document.xml.tasks;
 
-import io.github.orionlibs.utilities.abstraction.Orion;
-import io.github.orionlibs.utilities.exception.Assert;
+import io.github.orionlibs.core.exception.Assert;
 import java.io.File;
 import java.io.IOException;
 import jakarta.xml.bind.JAXBException;
@@ -11,7 +10,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
-public class OpenXMLFileTask extends Orion
+public class OpenXMLFileTask
 {
     public static Document run(File XMLFilePath) throws JAXBException, ParserConfigurationException, SAXException, IOException
     {
