@@ -2,11 +2,6 @@ package io.github.orionlibs.utilities.web.emailer;
 
 import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
 import io.github.orionlibs.core.file_system.file.FileService;
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URL;
-import java.util.Date;
 import jakarta.mail.BodyPart;
 import jakarta.mail.Message;
 import jakarta.mail.MessagingException;
@@ -15,6 +10,11 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeBodyPart;
 import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeMultipart;
+import java.io.File;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.util.Date;
 import org.apache.commons.io.FileUtils;
 
 public class EmailMessageBuilder

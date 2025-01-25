@@ -14,7 +14,6 @@ public class ZIPCompressionService
     public static void compressAsStream(String tempFolder, Set<File> filesToCompress, OutputStream output, boolean deleteFilesAfterCompression) throws IOException
     {
         ZipOutputStream zos = new ZipOutputStream(output);
-
         for(File file : filesToCompress)
         {
             ZipEntry zipEntry = new ZipEntry(file.getName());
@@ -22,15 +21,11 @@ public class ZIPCompressionService
             zos.write(Files.readAllBytes(file.toPath()));
             zos.closeEntry();
         }
-
         zos.finish();
-
         if(deleteFilesAfterCompression)
         {
-
             for(File fileToDelete : filesToCompress)
             {
-
                 try
                 {
                     FileService.deleteFile(fileToDelete);
@@ -38,10 +33,7 @@ public class ZIPCompressionService
                 catch(IOException e)
                 {
                 }
-
             }
-
         }
-
     }
 }

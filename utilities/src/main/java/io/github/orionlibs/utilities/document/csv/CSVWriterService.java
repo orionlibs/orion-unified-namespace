@@ -1,9 +1,9 @@
 package io.github.orionlibs.utilities.document.csv;
 
 import com.opencsv.CSVWriter;
+import io.github.orionlibs.core.utility.OrionUtils;
 import io.github.orionlibs.utilities.document.csv.tasks.BuildCSVBodyTask;
 import io.github.orionlibs.utilities.document.csv.tasks.BuildCSVHeaderTask;
-import io.github.orionlibs.core.utility.OrionUtils;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -47,13 +47,12 @@ public class CSVWriterService
     public static String[] buildEmptyHeader()
     {
         return new String[]
-        {""};
+                        {""};
     }
 
 
     public static String sanitiseValue(String value)
     {
-
         if(value != null && !value.isEmpty())
         {
             String valueTemp = value.replaceAll("[\\t\\n\\r]+", "  ");
@@ -64,7 +63,6 @@ public class CSVWriterService
         {
             return "";
         }
-
     }
 
 

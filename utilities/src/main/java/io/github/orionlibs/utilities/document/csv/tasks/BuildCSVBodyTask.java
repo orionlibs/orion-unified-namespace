@@ -8,18 +8,14 @@ public class BuildCSVBodyTask
     public static String run(List<List<String>> entries)
     {
         String body = "";
-
         if(entries != null && !entries.isEmpty())
         {
-
             for(List<String> entry : entries)
             {
-
                 for(int i = 0; i < entry.size(); i++)
                 {
                     body += "\"";
                     body += CSVWriterService.sanitiseValue(entry.get(i)) + "\"";
-
                     if(i < entry.size() - 1)
                     {
                         body += ",";
@@ -28,13 +24,9 @@ public class BuildCSVBodyTask
                     {
                         body += "\n";
                     }
-
                 }
-
             }
-
         }
-
         return body;
     }
 }

@@ -9,11 +9,11 @@ import java.util.Locale;
 public class CurrencyService
 {
     private static CurrenciesModel currencies;
+
     static
     {
         currencies = CurrenciesModel.of(new ArrayList<>(CurrencyBO.getUniqueCurrencies()));
     }
-
 
     public static Currency getCurrencyByLocale(Locale locale)
     {

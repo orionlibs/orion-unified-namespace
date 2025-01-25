@@ -1,8 +1,8 @@
 package io.github.orionlibs.utilities.scripting.shell.tasks;
 
 import io.github.orionlibs.core.exception.Assert;
-import io.github.orionlibs.utilities.scripting.shell.ShellCommandResult;
 import io.github.orionlibs.core.utility.OrionUtils;
+import io.github.orionlibs.utilities.scripting.shell.ShellCommandResult;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,7 +19,6 @@ public class RunShellPipelineTask
         Reader inputStreamReader = null;
         BufferedReader reader = null;
         ShellCommandResult result = null;
-
         try
         {
             List<Process> processes = ProcessBuilder.startPipeline(processBuilders);
@@ -29,13 +28,11 @@ public class RunShellPipelineTask
             reader = new BufferedReader(inputStreamReader);
             String line = null;
             StringBuilder sb = new StringBuilder();
-
             while((line = reader.readLine()) != null)
             {
                 sb.append(line);
                 sb.append(System.getProperty("line.separator"));
             }
-
             result = new ShellCommandResult(sb.toString());
         }
         catch(IOException e)
@@ -48,7 +45,6 @@ public class RunShellPipelineTask
             OrionUtils.closeResource(inputStreamReader);
             OrionUtils.closeResource(reader);
         }
-
         return result;
     }
 }

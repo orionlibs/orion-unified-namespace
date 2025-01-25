@@ -1,7 +1,7 @@
 package io.github.orionlibs.utilities.calendar.conversion;
 
-import io.github.orionlibs.utilities.calendar.Calendar;
 import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.utilities.calendar.Calendar;
 import lombok.Getter;
 
 @Getter

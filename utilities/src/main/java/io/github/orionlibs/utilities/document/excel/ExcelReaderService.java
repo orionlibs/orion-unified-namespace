@@ -105,27 +105,21 @@ public class ExcelReaderService
     public List<String[]> getExcelRowsExceptForHeader()
     {
         Sheet sheet = excelReader.getSheetAt(0);
-
         if(sheet == null)
         {
             sheet = excelReader.getSheet(sheetName);
         }
-
         List<String[]> rows = new ArrayList<>();
         Row headerRow = sheet.getRow(0);
         int numberOfColumns = headerRow.getPhysicalNumberOfCells();
-
         for(int i = 1; i < sheet.getPhysicalNumberOfRows(); i++)
         {
             Row row = sheet.getRow(i);
             String[] rowData = new String[numberOfColumns];
-
             for(int j = 0; j < numberOfColumns; j++)
             {
-
                 if(row.getCell(j) != null)
                 {
-
                     switch(row.getCell(j).getCellType())
                     {
                         case STRING:
@@ -150,18 +144,14 @@ public class ExcelReaderService
                         default:
                             rowData[j] = " ";
                     }
-
                 }
                 else
                 {
                     rowData[j] = " ";
                 }
-
             }
-
             rows.add(rowData);
         }
-
         closeExcelFile();
         return rows;
     }
@@ -170,20 +160,16 @@ public class ExcelReaderService
     public List<String[]> getExcelHeadersRow()
     {
         Sheet sheet = excelReader.getSheetAt(0);
-
         if(sheet == null)
         {
             sheet = excelReader.getSheet(sheetName);
         }
-
         Row row = sheet.getRow(0);
         String[] rowData = new String[row.getPhysicalNumberOfCells()];
-
         for(int i = 0; i < row.getPhysicalNumberOfCells(); i++)
         {
             rowData[i] = row.getCell(i).getStringCellValue();
         }
-
         List<String[]> rows = new ArrayList<>();
         rows.add(rowData);
         closeExcelFile();

@@ -1,8 +1,8 @@
 package io.github.orionlibs.utilities.calendar.time;
 
+import io.github.orionlibs.core.object.CloningService;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.CalendarService;
-import io.github.orionlibs.core.object.CloningService;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -150,10 +150,8 @@ public class Time implements Cloneable
         String[] timeTokens = timeString.split(":");
         this.hours = Integer.parseInt(timeTokens[0]);
         this.minutes = Integer.parseInt(timeTokens[1]);
-
         if(timeTokens.length > 2 && timeTokens[2] != null)
         {
-
             if(timeTokens[2].indexOf(".") >= 0)
             {
                 this.seconds = Integer.parseInt(timeTokens[2].substring(0, timeTokens[2].indexOf(".")));
@@ -163,20 +161,16 @@ public class Time implements Cloneable
             {
                 this.seconds = Integer.parseInt(timeTokens[2]);
             }
-
         }
-
     }
 
 
     public String getTimeString()
     {
         String timeString = formatHoursString() + ":" + formatMinutesString() + ":" + formatSecondsString();
-
         if(milliseconds > 0)
         {
             timeString += "." + milliseconds;
-
             if(milliseconds < 10)
             {
                 timeString += "00";
@@ -185,9 +179,7 @@ public class Time implements Cloneable
             {
                 timeString += "0";
             }
-
         }
-
         return timeString;
     }
 
@@ -237,12 +229,10 @@ public class Time implements Cloneable
     public LocalTime toLocalTime(boolean applyDaylightSavings)
     {
         int hoursAdjustedToDaylightSavings = hours;
-
         if(applyDaylightSavings)
         {
             hoursAdjustedToDaylightSavings += CalendarService.getDaylightSavingsHoursToAdd();
         }
-
         return LocalTime.of(hoursAdjustedToDaylightSavings, minutes, seconds, (milliseconds * 1_000_000));
     }
 
@@ -262,7 +252,6 @@ public class Time implements Cloneable
 
     public Time getCopy()
     {
-
         try
         {
             return this.clone();
@@ -271,7 +260,6 @@ public class Time implements Cloneable
         {
             e.printStackTrace();
         }
-
         return null;
     }
 

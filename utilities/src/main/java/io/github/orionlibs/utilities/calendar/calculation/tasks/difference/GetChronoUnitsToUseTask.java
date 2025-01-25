@@ -10,7 +10,6 @@ class GetChronoUnitsToUseTask
     @SuppressWarnings("unchecked")
     static List<String> run(String units, String[] unitsToUse)
     {
-
         if(!units.isEmpty())
         {
             List<String> unitsToUseList = new ArrayList<>(Arrays.asList(unitsToUse));
@@ -21,6 +20,5 @@ class GetChronoUnitsToUseTask
         {
             return Arrays.asList(unitsToUse);
         }
-
     }
 }

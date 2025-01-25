@@ -20,7 +20,6 @@ public class EmailService
 
     public static boolean sendEmail(EmailData emailData) throws EmailerException
     {
-
         if(InMemoryConfigurationService.getBooleanProp("enable.emailer", true))
         {
             return EmailManager.sendEmail(emailData);
@@ -29,6 +28,5 @@ public class EmailService
         {
             return true;
         }
-
     }
 }

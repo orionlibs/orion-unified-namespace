@@ -5,9 +5,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import io.github.orionlibs.core.exception.Assert;
 import io.github.orionlibs.utilities.document.json.tasks.ConvertJSONObjectToMapTask;
 import io.github.orionlibs.utilities.document.json.tasks.ConvertJSONObjectToStringTask;
-import io.github.orionlibs.core.exception.Assert;
 import java.util.Map;
 
 public class JSONService
@@ -122,7 +122,6 @@ public class JSONService
     public static boolean isValidJSON(String JSONData)
     {
         ObjectMapper objectMapper = new ObjectMapper();
-
         try
         {
             objectMapper.readValue(JSONData, JsonNode.class);
@@ -134,7 +133,6 @@ public class JSONService
         catch(JsonProcessingException e)
         {
         }
-
         return false;
     }
 
@@ -148,7 +146,6 @@ public class JSONService
     public static String findValueForPath(String JSONData, String path)
     {
         String foundValue = null;
-
         try
         {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -160,19 +157,16 @@ public class JSONService
         {
             e.printStackTrace();
         }
-
         return foundValue;
     }
 
 
     private static String findValueForPath(JsonNode node, String[] keys, int index)
     {
-
         if(index < keys.length)
         {
             String currentKey = keys[index];
             int arrayIndex = parseArrayIndex(currentKey);
-
             if(arrayIndex != -1)
             {
                 currentKey = currentKey.substring(0, currentKey.length() - (currentKey.length() - currentKey.indexOf("[")));
@@ -183,32 +177,26 @@ public class JSONService
             else
             {
                 JsonNode value = node.get(currentKey);
-
                 if(value != null)
                 {
                     return findValueForPath(value, keys, index + 1);
                 }
-
             }
-
         }
         else
         {
             return node.toString();
         }
-
         return null;
     }
 
 
     private static int parseArrayIndex(String key)
     {
-
         if(key.matches("^.+\\[\\d+\\]$"))
         {
             return Integer.parseInt(key.substring(key.indexOf("[") + 1, key.length() - 1));
         }
-
         return -1;
     }
 }

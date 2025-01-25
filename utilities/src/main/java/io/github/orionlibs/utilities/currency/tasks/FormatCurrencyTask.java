@@ -11,7 +11,6 @@ public class FormatCurrencyTask
     {
         Assert.notNull(amount, "amount input cannot be null.");
         Assert.notNull(locale, "locale input cannot be null.");
-
         try
         {
             return DecimalFormat.getCurrencyInstance(locale).format(amount);
@@ -20,7 +19,6 @@ public class FormatCurrencyTask
         {
             //throw new CurrencyFormatException(e.getMessage());
         }
-
         return "";
     }
 
@@ -30,10 +28,8 @@ public class FormatCurrencyTask
         Assert.notNull(locale, "locale input cannot be null.");
         BigDecimal amountTemp = null;
         long tempAmount = Math.abs(amount);
-
         if(tempAmount < 100)
         {
-
             if(tempAmount == 0L)
             {
                 amountTemp = new BigDecimal("0.00");
@@ -46,18 +42,15 @@ public class FormatCurrencyTask
             {
                 amountTemp = new BigDecimal("0." + Long.toString(tempAmount));
             }
-
         }
         else
         {
             String amountString = Long.toString(tempAmount);
             amountTemp = new BigDecimal(amountString.substring(0, amountString.length() - 2) + "." + amountString.substring(amountString.length() - 2));
         }
-
         try
         {
             String result = DecimalFormat.getCurrencyInstance(locale).format(amountTemp);
-
             if(amount < 0L)
             {
                 return "-" + result;
@@ -66,13 +59,11 @@ public class FormatCurrencyTask
             {
                 return result;
             }
-
         }
         catch(IllegalArgumentException e)
         {
             //throw new CurrencyFormatException(e.getMessage());
         }
-
         return "";
     }
 }

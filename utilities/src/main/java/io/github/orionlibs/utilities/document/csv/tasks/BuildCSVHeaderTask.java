@@ -8,14 +8,11 @@ public class BuildCSVHeaderTask
     public static String run(List<String> headerColumnNames)
     {
         String header = "";
-
         if(headerColumnNames != null && !headerColumnNames.isEmpty())
         {
-
             for(int i = 0; i < headerColumnNames.size(); i++)
             {
                 header += "\"" + CSVWriterService.sanitiseValue(headerColumnNames.get(i)) + "\"";
-
                 if(i < headerColumnNames.size() - 1)
                 {
                     header += ",";
@@ -24,11 +21,8 @@ public class BuildCSVHeaderTask
                 {
                     header += "\n";
                 }
-
             }
-
         }
-
         return header;
     }
 }

@@ -4,10 +4,12 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.util.MinimalPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import java.util.TimeZone;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.HandlerAdapter;
@@ -22,13 +24,13 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @EnableWebMvc
 @EnableScheduling
 @ComponentScan(basePackages = {"io.github.orionlibs.api"})
-//@Import({DashboardController.class})
+@Import({SpringConfiguration.class})
 public class SpringBootApplication extends SpringBootServletInitializer implements WebMvcConfigurer
 {
     public static void main(String[] args)
     {
         SpringApplication.run(SpringBootApplication.class, args);
-        System.setProperty("active.execution.profile", OrionDomain.production);
+        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
     }
 
 

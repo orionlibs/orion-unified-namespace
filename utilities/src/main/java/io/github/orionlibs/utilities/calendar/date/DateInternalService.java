@@ -1,8 +1,8 @@
 package io.github.orionlibs.utilities.calendar.date;
 
+import io.github.orionlibs.core.string.StringsService;
 import io.github.orionlibs.utilities.calendar.date.tasks.EqualsForDateTask;
 import io.github.orionlibs.utilities.calendar.date.tasks.HashCodeForDateTask;
-import io.github.orionlibs.core.string.StringsService;
 
 class DateInternalService
 {

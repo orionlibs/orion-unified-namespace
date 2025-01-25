@@ -11,8 +11,6 @@ public enum HTTPHeader implements OrionEnumeration
     Profile("Profile"),
     Accept("Accept"),
     NeedsReauthentication("needs-reauthentication");
-
-
     private String name;
 
 
@@ -58,17 +56,13 @@ public enum HTTPHeader implements OrionEnumeration
     public static boolean valueExists(String other)
     {
         HTTPHeader[] values = values();
-
         for(HTTPHeader value : values)
         {
-
             if(value.get().equals(other))
             {
                 return true;
             }
-
         }
-
         return false;
     }
 
@@ -76,17 +70,13 @@ public enum HTTPHeader implements OrionEnumeration
     public static HTTPHeader getEnumForValue(String other)
     {
         HTTPHeader[] values = values();
-
         for(HTTPHeader value : values)
         {
-
             if(value.get().equals(other))
             {
                 return value;
             }
-
         }
-
         return null;
     }
 }

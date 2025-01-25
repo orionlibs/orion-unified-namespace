@@ -1,8 +1,8 @@
 package io.github.orionlibs.utilities.currency;
 
+import io.github.orionlibs.core.exception.Assert;
 import io.github.orionlibs.utilities.calendar.locale.LocaleService;
 import io.github.orionlibs.utilities.currency.data_access.CurrencyModel;
-import io.github.orionlibs.core.exception.Assert;
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.Currency;
@@ -31,7 +31,6 @@ public class CurrencyBO
 
     public static Currency getCurrencyByLocale(Locale locale)
     {
-
         try
         {
             return Currency.getInstance(locale);
@@ -40,7 +39,6 @@ public class CurrencyBO
         {
             return null;
         }
-
     }
 
 

@@ -1,8 +1,8 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks.difference;
 
+import io.github.orionlibs.core.exception.InvalidArgumentException;
 import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import io.github.orionlibs.utilities.calendar.datetime.DateTimeRules;
-import io.github.orionlibs.core.exception.InvalidArgumentException;
 import java.time.temporal.ChronoUnit;
 
 public class GetDifferenceBetweenTwoDateTimesInDaysTask

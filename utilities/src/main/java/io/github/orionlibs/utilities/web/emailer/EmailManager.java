@@ -1,10 +1,10 @@
 package io.github.orionlibs.utilities.web.emailer;
 
 import io.github.orionlibs.core.exception.Assert;
-import java.util.Properties;
 import jakarta.mail.NoSuchProviderException;
 import jakarta.mail.Session;
 import jakarta.mail.internet.MimeMessage;
+import java.util.Properties;
 
 class EmailManager
 {
@@ -16,7 +16,6 @@ class EmailManager
         Session emailSession = Session.getInstance(emailParameters);
         EmailMessageDependencies emailDependencies = EmailMessageDependenciesBuilder.buildDependencies(emailSession, emailData);
         MimeMessage messageToSend = EmailMessageBuilder.buildMessage(emailDependencies);
-
         try
         {
             return EmailSender.sendEmail(EmailSenderDataBuilder.build(emailSession, messageToSend));
@@ -29,6 +28,5 @@ class EmailManager
         {
             throw new EmailerException(e, "there was a problem with the emailer.");
         }
-
     }
 }

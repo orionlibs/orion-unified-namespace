@@ -22,24 +22,19 @@ public class Delay
     {
         long durationNanos = numberOfSeconds * 1_000_000_000L;
         long startTime = System.nanoTime();
-
         while(true)
         {
             long currentTime = System.nanoTime();
             long elapsedTime = currentTime - startTime;
-
             if(elapsedTime >= durationNanos)
             {
                 break;
             }
-
             for(int i = 0; i < 10; i++)
             {
                 Math.sin(i);
             }
-
         }
-
     }
 
 

@@ -1,7 +1,6 @@
 package io.github.orionlibs.utilities.web.emailer;
 
 import jakarta.mail.Transport;
-// import com.sun.mail.smtp.SMTPTransport;
 import jakarta.mail.internet.MimeMessage;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,8 +1,8 @@
 package io.github.orionlibs.utilities.calendar.stopwatch.tasks;
 
+import io.github.orionlibs.core.exception.Assert;
 import io.github.orionlibs.utilities.calendar.Calendar;
 import io.github.orionlibs.utilities.calendar.stopwatch.Stopwatch;
-import io.github.orionlibs.core.exception.Assert;
 
 public class GetTimeLapsedWithNanosecondsTask
 {

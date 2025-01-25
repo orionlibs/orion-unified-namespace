@@ -1,7 +1,7 @@
 package io.github.orionlibs.utilities.calendar;
 
-import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import io.github.orionlibs.core.string.StringsService;
+import io.github.orionlibs.utilities.calendar.datetime.DateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -20,12 +20,10 @@ public class SQLTimestampFormatter
 
     public void setupFormattedDateTime()
     {
-
         if(!timestamp.getHaveFormattedValuesBeenInitialised())
         {
             int offsetHours = CalendarService.getDaylightSavingsHoursToAdd();
             DateTime dateTimeAdjustedForDaylightSavings = null;
-
             if(offsetHours != 0)
             {
                 dateTimeAdjustedForDaylightSavings = DateTime.of(CalendarService.addHoursToDatetime(timestamp, offsetHours));
@@ -42,15 +40,12 @@ public class SQLTimestampFormatter
             {
                 setupFormattedDateTimeUTC();
             }
-
         }
-
     }
 
 
     public void setupFormattedDateTimeUTC()
     {
-
         if(!timestamp.getHaveFormattedValuesBeenInitialised())
         {
             int years = timestamp.getYears();
@@ -63,7 +58,6 @@ public class SQLTimestampFormatter
             buildFormattedDateWithHyphens(years);
             buildFormattedDateWithHyphensWithoutYear();
         }
-
     }
 
 

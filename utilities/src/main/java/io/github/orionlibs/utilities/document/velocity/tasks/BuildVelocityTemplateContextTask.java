@@ -14,7 +14,6 @@ public class BuildVelocityTemplateContextTask
     public static VelocityContext run(Map<String, String> templateParametersMapper)
     {
         VelocityContext context = run();
-
         if(templateParametersMapper != null && !templateParametersMapper.isEmpty())
         {
             templateParametersMapper.entrySet()
@@ -22,7 +21,6 @@ public class BuildVelocityTemplateContextTask
                             .filter(entry -> entry != null && entry.getKey() != null && !entry.getKey().isEmpty())
                             .forEach(entry -> context.put(entry.getKey(), entry.getValue()));
         }
-
         return context;
     }
 }

@@ -47,10 +47,8 @@ public class CurrencyFormatterBO
     {
         BigDecimal amountTemp = null;
         long tempAmount = Math.abs(amount);
-
         if(amount < 100)
         {
-
             if(tempAmount == 0L)
             {
                 amountTemp = new BigDecimal("0.00");
@@ -63,14 +61,12 @@ public class CurrencyFormatterBO
             {
                 amountTemp = new BigDecimal("0." + Long.toString(tempAmount));
             }
-
         }
         else
         {
             String amountString = Long.toString(amount);
             amountTemp = new BigDecimal(amountString.substring(0, amountString.length() - 2) + "." + amountString.substring(amountString.length() - 2));
         }
-
         return new DecimalFormat("###,###,##0.00").format(amountTemp.doubleValue());
     }
 

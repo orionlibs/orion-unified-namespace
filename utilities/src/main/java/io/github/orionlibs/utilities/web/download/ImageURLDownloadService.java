@@ -47,7 +47,6 @@ public class ImageURLDownloadService implements OrionJob
 
     public void download()
     {
-
         try
         {
             Jsoup.connect(baseURL).get().select("a").forEach(link -> System.out.println(link.attr("abs:href")));
@@ -56,7 +55,6 @@ public class ImageURLDownloadService implements OrionJob
         catch(IOException e)
         {
         }
-
     }
 
 

@@ -1006,7 +1006,6 @@ public class CalendarService
 
     public static int getDaylightSavingsHoursToAdd()
     {
-
         //System.out.println(TimeZone.getTimeZone("GB").inDaylightTime(new java.util.Date()));
         //System.out.println(TimeZone.getTimeZone("GB").inDaylightTime(new java.util.Date(2021, 9, 30)));
         if(ZoneId.of("GB").getRules().isDaylightSavings(Instant.now()))
@@ -1017,7 +1016,6 @@ public class CalendarService
         {
             return 0;
         }
-
     }
 
 
@@ -1035,7 +1033,6 @@ public class CalendarService
 
     public static int getDaylightSavingsMinutesToAdd(ZoneId zoneID)
     {
-
         if(zoneID != null)
         {
             return getTimeZoneOffsetInMinutesFromUTC(getCurrentDatetimeAtZone(zoneID));
@@ -1044,7 +1041,6 @@ public class CalendarService
         {
             return getTimeZoneOffsetInMinutesFromUTC(getCurrentDatetimeAtLocalZone());
         }
-
     }
 
 

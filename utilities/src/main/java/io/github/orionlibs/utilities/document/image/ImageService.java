@@ -11,7 +11,6 @@ public class ImageService
 {
     public static int getHeightBasedOnWidthToKeepAspectRatio(int actualWidth, int actualHeight, int targetWidth)
     {
-
         if(actualWidth != targetWidth)
         {
             double percentageOfWidthToKeep = 1.0 * targetWidth / actualWidth;
@@ -21,7 +20,6 @@ public class ImageService
         {
             return actualHeight;
         }
-
     }
 
 
@@ -52,7 +50,6 @@ public class ImageService
 
     public static BufferedImage shrinkOrEnlargeImage(BufferedImage inputImage, int targetWidth) throws Exception
     {
-
         if(inputImage.getWidth() != targetWidth)
         {
             int targetHeight = getHeightBasedOnWidthToKeepAspectRatio(inputImage.getWidth(), inputImage.getHeight(), targetWidth);
@@ -62,7 +59,6 @@ public class ImageService
         {
             return inputImage;
         }
-
     }
 
 

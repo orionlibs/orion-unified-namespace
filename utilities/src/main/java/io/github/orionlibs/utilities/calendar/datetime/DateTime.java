@@ -1,5 +1,6 @@
 package io.github.orionlibs.utilities.calendar.datetime;
 
+import io.github.orionlibs.core.object.CloningService;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.SQLTimestamp;
@@ -9,7 +10,6 @@ import io.github.orionlibs.utilities.calendar.date.InvalidDateException;
 import io.github.orionlibs.utilities.calendar.time.InvalidTimeException;
 import io.github.orionlibs.utilities.calendar.time.Time;
 import io.github.orionlibs.utilities.calendar.time.TimeRules;
-import io.github.orionlibs.core.object.CloningService;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -411,29 +411,22 @@ public class DateTime implements Cloneable
     public String printInSQLFormatWithStringBetweenDateAndTime(String stringBetweenDateAndtime)
     {
         String formattedDateTime = "";
-
         if(date != null)
         {
             formattedDateTime += date.getDateStringSplitByHyphensYearFirst();
         }
-
         if(time != null)
         {
-
             if(date != null)
             {
                 formattedDateTime += " ";
-
                 if(stringBetweenDateAndtime != null && !stringBetweenDateAndtime.isEmpty())
                 {
                     formattedDateTime += stringBetweenDateAndtime + " ";
                 }
-
             }
-
             formattedDateTime += time.getTimeStringWithoutMilliseconds();
         }
-
         return formattedDateTime;
     }
 
@@ -441,29 +434,22 @@ public class DateTime implements Cloneable
     public String printInSQLFormatWithStringBetweenDateAndTimeWithoutSeconds(String stringBetweenDateAndtime)
     {
         String formattedDateTime = "";
-
         if(date != null)
         {
             formattedDateTime += date.getDateStringSplitByHyphensYearFirst();
         }
-
         if(time != null)
         {
-
             if(date != null)
             {
                 formattedDateTime += " ";
-
                 if(stringBetweenDateAndtime != null)
                 {
                     formattedDateTime += " " + stringBetweenDateAndtime + " ";
                 }
-
             }
-
             formattedDateTime += time.getTimeStringWithoutSeconds();
         }
-
         return formattedDateTime;
     }
 
@@ -471,10 +457,8 @@ public class DateTime implements Cloneable
     public String printInInternationalFormatWithStringBetweenDateAndTimeWithoutSeconds(String stringBetweenDateAndtime, boolean printDateWithoutYear, boolean printDateInLongFormat) throws InvalidDateException
     {
         String formattedDateTime = "";
-
         if(date != null)
         {
-
             if(printDateWithoutYear && printDateInLongFormat)
             {
                 formattedDateTime += CalendarService.convertDateToLongFormatWithoutYear(date);
@@ -491,26 +475,19 @@ public class DateTime implements Cloneable
             {
                 formattedDateTime += date.getDateStringSplitByHyphens();
             }
-
         }
-
         if(time != null)
         {
-
             if(date != null)
             {
                 formattedDateTime += " ";
-
                 if(stringBetweenDateAndtime != null)
                 {
                     formattedDateTime += stringBetweenDateAndtime + " ";
                 }
-
             }
-
             formattedDateTime += time.getTimeStringWithoutSeconds();
         }
-
         return formattedDateTime;
     }
 
@@ -520,10 +497,8 @@ public class DateTime implements Cloneable
         String formattedDateTime = "";
         int offsetMinutes = CalendarService.getDaylightSavingsMinutesToAdd();
         DateTime dateTimeAdjustedForDaylightSavings = null;
-
         if(date != null)
         {
-
             if(offsetMinutes != 0)
             {
                 dateTimeAdjustedForDaylightSavings = CalendarService.addMinutesToDatetime(this, offsetMinutes);
@@ -533,17 +508,13 @@ public class DateTime implements Cloneable
             {
                 formattedDateTime += date.getDateStringSplitByHyphensYearFirst();
             }
-
         }
-
         if(time != null)
         {
-
             if(date != null)
             {
                 formattedDateTime += " ";
             }
-
             if(offsetMinutes != 0)
             {
                 formattedDateTime += dateTimeAdjustedForDaylightSavings.getTime().getTimeString();
@@ -552,9 +523,7 @@ public class DateTime implements Cloneable
             {
                 formattedDateTime += time.getTimeString();
             }
-
         }
-
         return formattedDateTime;
     }
 
@@ -588,10 +557,8 @@ public class DateTime implements Cloneable
         String formattedDateTime = "";
         int offsetMinutes = CalendarService.getDaylightSavingsMinutesToAdd();
         DateTime dateTimeAdjustedForDaylightSavings = null;
-
         if(date != null)
         {
-
             if(offsetMinutes != 0)
             {
                 dateTimeAdjustedForDaylightSavings = CalendarService.addMinutesToDatetime(this, offsetMinutes);
@@ -601,9 +568,7 @@ public class DateTime implements Cloneable
             {
                 formattedDateTime += date.getDateStringSplitByHyphensYearFirst();
             }
-
         }
-
         return formattedDateTime;
     }
 
@@ -625,10 +590,8 @@ public class DateTime implements Cloneable
         String formattedTime = "";
         int offsetHours = CalendarService.getDaylightSavingsHoursToAdd();
         DateTime dateTimeAdjustedForDaylightSavings = null;
-
         if(time != null)
         {
-
             if(offsetHours != 0)
             {
                 dateTimeAdjustedForDaylightSavings = CalendarService.addHoursToDatetime(this, offsetHours);
@@ -638,9 +601,7 @@ public class DateTime implements Cloneable
             {
                 formattedTime += time.getTimeString();
             }
-
         }
-
         return formattedTime;
     }
 
@@ -660,7 +621,6 @@ public class DateTime implements Cloneable
 
     public DateTime getCopy()
     {
-
         try
         {
             return this.clone();
@@ -669,7 +629,6 @@ public class DateTime implements Cloneable
         {
             e.printStackTrace();
         }
-
         return null;
     }
 

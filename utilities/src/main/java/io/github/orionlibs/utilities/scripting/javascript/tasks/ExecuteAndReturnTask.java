@@ -10,7 +10,6 @@ public class ExecuteAndReturnTask
     {
         ScriptEngineManager factory = new ScriptEngineManager();
         ScriptEngine engine = factory.getEngineByName("javascript");
-
         try
         {
             engine.eval(JavaScriptCodeToExecute);
@@ -19,7 +18,6 @@ public class ExecuteAndReturnTask
         catch(ScriptException e)
         {
         }
-
         return null;
     }
 }

@@ -5,8 +5,6 @@ import io.github.orionlibs.core.abstraction.OrionEnumeration;
 public enum HTTPHeaderValue implements OrionEnumeration
 {
     Bearer("Bearer ");
-
-
     private String name;
 
 
@@ -52,17 +50,13 @@ public enum HTTPHeaderValue implements OrionEnumeration
     public static boolean valueExists(String other)
     {
         HTTPHeaderValue[] values = values();
-
         for(HTTPHeaderValue value : values)
         {
-
             if(value.get().equals(other))
             {
                 return true;
             }
-
         }
-
         return false;
     }
 
@@ -70,17 +64,13 @@ public enum HTTPHeaderValue implements OrionEnumeration
     public static HTTPHeaderValue getEnumForValue(String other)
     {
         HTTPHeaderValue[] values = values();
-
         for(HTTPHeaderValue value : values)
         {
-
             if(value.get().equals(other))
             {
                 return value;
             }
-
         }
-
         return null;
     }
 }

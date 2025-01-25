@@ -1,7 +1,7 @@
 package io.github.orionlibs.utilities.web.emailer.template;
 
-import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.core.uuid.UUIDSecurityService;
+import io.github.orionlibs.utilities.calendar.CalendarService;
 import java.util.HashMap;
 import java.util.Map;
 

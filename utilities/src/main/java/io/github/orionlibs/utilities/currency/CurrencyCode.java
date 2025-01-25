@@ -7,8 +7,6 @@ public enum CurrencyCode implements OrionEnumeration
     Euro("EUR"),
     BritishPound("GBP"),
     USDollar("USD");
-
-
     private String name;
 
 
@@ -54,17 +52,13 @@ public enum CurrencyCode implements OrionEnumeration
     public static boolean valueExists(String other)
     {
         CurrencyCode[] values = values();
-
         for(CurrencyCode value : values)
         {
-
             if(value.get().equals(other))
             {
                 return true;
             }
-
         }
-
         return false;
     }
 
@@ -72,17 +66,13 @@ public enum CurrencyCode implements OrionEnumeration
     public static CurrencyCode getEnumForValue(String other)
     {
         CurrencyCode[] values = values();
-
         for(CurrencyCode value : values)
         {
-
             if(value.get().equals(other))
             {
                 return value;
             }
-
         }
-
         return null;
     }
 }

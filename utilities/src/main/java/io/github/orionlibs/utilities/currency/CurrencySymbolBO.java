@@ -8,7 +8,6 @@ public class CurrencySymbolBO
 {
     public static String getCurrencySymbolByCurrencyCode(CurrencyCode currencyCode)
     {
-
         try
         {
             return Currency.getInstance(getLocaleByCurrencyCode(currencyCode)).getSymbol();
@@ -17,13 +16,11 @@ public class CurrencySymbolBO
         {
             return null;
         }
-
     }
 
 
     public static String getCurrencySymbolByCurrencyCode(String currencyCode)
     {
-
         try
         {
             return Currency.getInstance(getLocaleByCurrencyCode(currencyCode)).getSymbol();
@@ -32,7 +29,6 @@ public class CurrencySymbolBO
         {
             return null;
         }
-
     }
 
 
@@ -44,18 +40,14 @@ public class CurrencySymbolBO
 
     public static Locale getLocaleByCurrencyCode(String currencyCode)
     {
-
         for(Locale locale : NumberFormat.getAvailableLocales())
         {
             String code = NumberFormat.getCurrencyInstance(locale).getCurrency().getCurrencyCode();
-
             if(currencyCode.equals(code))
             {
                 return locale;
             }
-
         }
-
         return null;
     }
 }

@@ -11,7 +11,6 @@ public class EmailSender
     public static boolean sendEmail(EmailSenderData senderData) throws EmailerException
     {
         boolean emailWasSentSuccessfully = false;
-
         try
         {
             Transport transport = senderData.getTransport();
@@ -36,7 +35,6 @@ public class EmailSender
         {
             throw new EmailerException(e, "there was some problem with the emailer.");
         }
-
         return emailWasSentSuccessfully;
     }
 }

@@ -1,8 +1,8 @@
 package io.github.orionlibs.utilities.calendar.calculation.tasks.difference;
 
+import io.github.orionlibs.core.exception.InvalidArgumentException;
 import io.github.orionlibs.utilities.calendar.date.Date;
 import io.github.orionlibs.utilities.calendar.date.DateRules;
-import io.github.orionlibs.core.exception.InvalidArgumentException;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 

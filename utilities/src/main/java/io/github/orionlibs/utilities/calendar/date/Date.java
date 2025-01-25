@@ -1,10 +1,10 @@
 package io.github.orionlibs.utilities.calendar.date;
 
+import io.github.orionlibs.core.exception.Assert;
+import io.github.orionlibs.core.object.CloningService;
 import io.github.orionlibs.utilities.calendar.CalendarRules;
 import io.github.orionlibs.utilities.calendar.CalendarService;
 import io.github.orionlibs.utilities.calendar.DateTokens;
-import io.github.orionlibs.core.exception.Assert;
-import io.github.orionlibs.core.object.CloningService;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.ZoneId;
@@ -272,7 +272,6 @@ public class Date implements Cloneable
 
     public Date getCopy()
     {
-
         try
         {
             return this.clone();
@@ -281,7 +280,6 @@ public class Date implements Cloneable
         {
             e.printStackTrace();
         }
-
         return null;
     }
 
