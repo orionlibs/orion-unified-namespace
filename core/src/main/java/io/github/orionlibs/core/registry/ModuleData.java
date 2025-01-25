@@ -1,5 +1,8 @@
 package io.github.orionlibs.core.registry;
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
 public class ModuleData
 {
     private String name;

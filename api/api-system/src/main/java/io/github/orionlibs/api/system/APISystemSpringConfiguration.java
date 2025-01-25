@@ -8,6 +8,6 @@ public class APISystemSpringConfiguration
 {
     public APISystemSpringConfiguration()
     {
-        ModuleRegistry.registerModule("api.system", "0.0.1");
+        ModuleRegistry.registerModule("api-system", "0.0.1");
     }
 }
