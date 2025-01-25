@@ -7,11 +7,11 @@ let orionCommon =
             method: 'GET',
             cache: "no-cache",
             mode: "cors",//cors, no-cors, same-origin
-            credentials: "include",//include, same-origin, omit
+            credentials: "omit",//include, same-origin, omit
             headers:
             {
-                'Content-Type': 'application/json',
-                'X-Xsrf-Token': orionCommon.getCookie('XSRF-TOKEN')
+                'Content-Type': 'application/json'//,
+                //'X-Xsrf-Token': orionCommon.getCookie('XSRF-TOKEN')
             }
         })
         .then(response =>
@@ -58,11 +58,11 @@ let orionCommon =
             method: 'POST',
             cache: "no-cache",
             mode: "cors",//cors, no-cors, same-origin
-            credentials: "include",//include, same-origin, omit
+            credentials: "omit",//include, same-origin, omit
             headers:
             {
-                'Content-Type': 'application/json',
-                'X-Xsrf-Token': orionCommon.getCookie('XSRF-TOKEN')
+                'Content-Type': 'application/json'//,
+                //'X-Xsrf-Token': orionCommon.getCookie('XSRF-TOKEN')
             },
             body: JSON.stringify(dataToSend)
         })
@@ -110,11 +110,11 @@ let orionCommon =
             method: 'PUT',
             cache: "no-cache",
             mode: "cors",//cors, no-cors, same-origin
-            credentials: "include",//include, same-origin, omit
+            credentials: "omit",//include, same-origin, omit
             headers:
             {
-                'Content-Type': 'application/json',
-                'X-Xsrf-Token': orionCommon.getCookie('XSRF-TOKEN')
+                'Content-Type': 'application/json'//,
+                //'X-Xsrf-Token': orionCommon.getCookie('XSRF-TOKEN')
             },
             body: JSON.stringify(dataToSend)
         })
@@ -162,11 +162,11 @@ let orionCommon =
             method: 'DELETE',
             cache: "no-cache",
             mode: "cors",//cors, no-cors, same-origin
-            credentials: "include",//include, same-origin, omit
+            credentials: "omit",//include, same-origin, omit
             headers:
             {
-                'Content-Type': 'application/json',
-                'X-Xsrf-Token': orionCommon.getCookie('XSRF-TOKEN')
+                'Content-Type': 'application/json'//,
+                //'X-Xsrf-Token': orionCommon.getCookie('XSRF-TOKEN')
             }
         })
         .then(response =>

@@ -34,10 +34,9 @@ public class SecurityConfig
     @Bean
     public Customizer<CorsConfigurer<HttpSecurity>> corsCustomizer()
     {
-        //return cors -> cors.disable();
         return cors -> cors.configurationSource(request -> {
             CorsConfiguration config = new CorsConfiguration();
-            config.setAllowedOrigins(Arrays.asList("http://localhost:8081", "null"));
+            config.setAllowedOrigins(Arrays.asList("*"));
             config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS", "websocket", "ws"));
             config.setAllowedHeaders(Arrays.asList("*"));
             config.setAllowCredentials(true);
