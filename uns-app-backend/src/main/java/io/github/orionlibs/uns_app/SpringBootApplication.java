@@ -58,13 +58,13 @@ public class SpringBootApplication extends SpringBootServletInitializer implemen
     }
 
 
-    /*@Override
+    @Override
     public void addCorsMappings(CorsRegistry registry)
     {
         registry.addMapping("/**")
                         .allowedOrigins("http://localhost:8081", "null")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS", "websocket", "ws")
                         .allowedHeaders("*")
-                        .allowCredentials(false);
-    }*/
+                        .allowCredentials(true);
+    }
 }

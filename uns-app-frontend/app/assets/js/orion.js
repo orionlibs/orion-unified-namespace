@@ -262,15 +262,18 @@ let orionCommon =
     },
 
 
-    fetchComponentData : function(url, elementID)
+    loadComponentDataAsText : function(url, elementID)
     {
         fetch(url,
         {
-            method: 'GET',
-            cache: "no-cache",
-            mode: "no-cors",//cors, no-cors, same-origin
-            credentials: "include"//include, same-origin, omit
-        })
+             method: 'GET',
+             cache: "no-cache",
+             mode: "cors",
+             credentials: "omit",
+             headers: {
+                 'Content-Type': 'application/json'
+             }
+         })
         .then(response =>
         {
             if(!response.ok)
@@ -278,11 +281,10 @@ let orionCommon =
                 throw new Error('Network response was not ok ' + response.statusText);
             }
 
-            return response.json();
+            return response.text();
         })
         .then(data =>
         {
-        alert(JSON.stringify(data));
             orionCommon.updateComponent(elementID, data);
         })
         .catch(error =>

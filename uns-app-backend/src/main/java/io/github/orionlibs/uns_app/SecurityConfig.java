@@ -1,5 +1,6 @@
 package io.github.orionlibs.uns_app;
 
+import java.util.Arrays;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
@@ -14,6 +15,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.header.writers.ReferrerPolicyHeaderWriter.ReferrerPolicy;
 import org.springframework.security.web.header.writers.XXssProtectionHeaderWriter.HeaderValue;
+import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsUtils;
 
 @Configuration
@@ -32,16 +34,16 @@ public class SecurityConfig
     @Bean
     public Customizer<CorsConfigurer<HttpSecurity>> corsCustomizer()
     {
-        return cors -> cors.disable();
-        /*return cors -> cors.configurationSource(request -> {
+        //return cors -> cors.disable();
+        return cors -> cors.configurationSource(request -> {
             CorsConfiguration config = new CorsConfiguration();
             config.setAllowedOrigins(Arrays.asList("http://localhost:8081", "null"));
             config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS", "websocket", "ws"));
             config.setAllowedHeaders(Arrays.asList("*"));
-            config.setAllowCredentials(false);
+            config.setAllowCredentials(true);
             config.setMaxAge(3600L);
             return config;
-        });*/
+        });
     }
 
 

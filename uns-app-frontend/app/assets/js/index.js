@@ -12,5 +12,5 @@ window.onload = async function () {
 
 $(document).ready(function()
 {
-    orionCommon.fetchComponentData('http://localhost:8080/api/v1/system/version', 'system-version-val');
+    orionCommon.loadComponentDataAsText('http://localhost:8080/api/v1/system/version', 'system-version-val');
 });
