@@ -1,5 +1,10 @@
 package io.github.orionlibs.uns_app;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import io.github.orionlibs.core.configuration.ConfigurationDAO;
+import io.github.orionlibs.core.configuration.ConfigurationService;
+import io.github.orionlibs.core.registry.ServiceRegistry;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
@@ -14,6 +19,8 @@ public class WebsocketConnectionTest extends ATest
     @Test
     void testWebSocketConnectionWithSockJS()
     {
-        //assertTrue(session.isConnected());
+        ServiceRegistry.registerService(ConfigurationDAO.class, new MyConfigDAO());
+        assertEquals("OrionUNS", ConfigurationService.getProp("system.name"));
+        assertEquals("test name", ConfigurationService.getProp("system.wrong.name"));
     }
 }

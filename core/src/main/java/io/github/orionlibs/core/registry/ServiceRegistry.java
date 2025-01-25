@@ -14,12 +14,9 @@ public class ServiceRegistry
 
     public static void registerService(Class<?> classType, Object service)
     {
-        for(Class<?> clazz : service.getClass().getClasses())
+        if(classType.isAssignableFrom(service.getClass()))
         {
-            if(clazz.getName().equals(classType.getName()))
-            {
-                services.put(classType, service);
-            }
+            services.put(classType, service);
         }
     }
 
