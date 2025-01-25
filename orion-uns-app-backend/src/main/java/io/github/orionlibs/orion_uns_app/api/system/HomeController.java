@@ -1,4 +1,4 @@
-package io.github.orionlibs.orion_uns_app.page;
+package io.github.orionlibs.orion_uns_app.api.system;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

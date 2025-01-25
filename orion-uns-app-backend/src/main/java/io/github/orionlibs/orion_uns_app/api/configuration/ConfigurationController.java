@@ -1,4 +1,4 @@
-package io.github.orionlibs.orion_uns_app.page.configuration;
+package io.github.orionlibs.orion_uns_app.api.configuration;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
