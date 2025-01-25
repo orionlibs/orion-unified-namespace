@@ -1,6 +1,6 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.configuration.ConfigurationService;
 import io.github.orionlibs.utilities.web.emailer.template.InitialEmailTemplateParametersProvider;
 import java.util.Map;
 
@@ -20,7 +20,7 @@ public class EmailService
 
     public static boolean sendEmail(EmailData emailData) throws EmailerException
     {
-        if(InMemoryConfigurationService.getBooleanProp("enable.emailer", true))
+        if(ConfigurationService.getBooleanProp("enable.emailer", true))
         {
             return EmailManager.sendEmail(emailData);
         }

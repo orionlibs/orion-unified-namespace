@@ -1,6 +1,6 @@
 package io.github.orionlibs.core.logger.tasks;
 
-import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.configuration.ConfigurationService;
 import io.github.orionlibs.core.exception.ExceptionService;
 import io.github.orionlibs.core.logger.ConsoleLoggerService;
 import io.github.orionlibs.core.runnable.OrionJob;
@@ -22,8 +22,8 @@ public class LogExceptionTask implements OrionJob
 
     public void run()
     {
-        boolean logToTomcat = InMemoryConfigurationService.getBooleanProp("error.logging.to.tomcat.enable");
-        boolean logToDatabase = InMemoryConfigurationService.getBooleanProp("error.logging.to.database.enable");
+        boolean logToTomcat = ConfigurationService.getBooleanProp("error.logging.to.tomcat.enable");
+        boolean logToDatabase = ConfigurationService.getBooleanProp("error.logging.to.database.enable");
         if(logToTomcat || logToDatabase)
         {
             String errorMessageTemp = "";

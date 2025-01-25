@@ -1,6 +1,6 @@
 package io.github.orionlibs.core.cryptology.encryption.rsa.tasks;
 
-import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
+import io.github.orionlibs.core.configuration.ConfigurationService;
 import io.github.orionlibs.core.cryptology.encryption.EncryptionAlgorithm;
 import io.github.orionlibs.core.exception.Assert;
 import java.io.IOException;
@@ -17,13 +17,13 @@ public class EncryptToRSATask
 {
     public static String run(String data) throws IOException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, ClassNotFoundException, InvalidKeySpecException
     {
-        return encryptData(data, (PublicKey)InMemoryConfigurationService.getObjectProp("public.rsa.key"), null);
+        return encryptData(data, (PublicKey)ConfigurationService.getObjectProp("public.rsa.key"), null);
     }
 
 
     public static String run(String data, EncryptionAlgorithm encryptionAlgorithmToUse) throws IOException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, ClassNotFoundException, InvalidKeySpecException
     {
-        return encryptData(data, (PublicKey)InMemoryConfigurationService.getObjectProp("public.rsa.key"), encryptionAlgorithmToUse);
+        return encryptData(data, (PublicKey)ConfigurationService.getObjectProp("public.rsa.key"), encryptionAlgorithmToUse);
     }
 
 

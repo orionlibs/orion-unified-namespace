@@ -1,6 +1,7 @@
 package io.github.orionlibs.core.security;
 
 import io.github.orionlibs.core.abstraction.OrionEnumeration;
+import io.github.orionlibs.core.configuration.ConfigurationService;
 import io.github.orionlibs.core.configuration.InMemoryConfigurationService;
 import io.github.orionlibs.core.cryptology.encryption.rsa.RSAEncryptionException;
 import io.github.orionlibs.core.cryptology.hashing.md5.MD5HashingException;
@@ -26,28 +27,28 @@ public class DataSecurityService
 {
     public static List<OrionEnumeration> getEncodingAndEncryptionAlgorithmsForUsername() throws NoEncodingAndEncryptionAlgorithmsForUsernameProvidedException
     {
-        String[] algorithmsToBeUsedInOrder = InMemoryConfigurationService.getProp("data.security.encoding.and.encryption.algorithms.to.use.for.username").split(",");
+        String[] algorithmsToBeUsedInOrder = ConfigurationService.getProp("data.security.encoding.and.encryption.algorithms.to.use.for.username").split(",");
         return extractEncodingAndEncryptionAlgorithms(algorithmsToBeUsedInOrder);
     }
 
 
     public static List<OrionEnumeration> getDecodingAndDecryptionAlgorithmsForUsername() throws NoEncodingAndEncryptionAlgorithmsForUsernameProvidedException
     {
-        String[] algorithmsToBeUsedInOrder = InMemoryConfigurationService.getProp("data.security.decoding.and.decryption.algorithms.to.use.for.username").split(",");
+        String[] algorithmsToBeUsedInOrder = ConfigurationService.getProp("data.security.decoding.and.decryption.algorithms.to.use.for.username").split(",");
         return extractDecodingAndDecryptionAlgorithms(algorithmsToBeUsedInOrder);
     }
 
 
     public static List<OrionEnumeration> getEncodingAndHashingAndEncryptionAlgorithmsForSensitiveUserData() throws NoEncodingAndEncryptionAlgorithmsForUsernameProvidedException
     {
-        String[] algorithmsToBeUsedInOrder = InMemoryConfigurationService.getProp("data.security.encoding.and.encryption.algorithms.to.use.for.sensitive.user.data").split(",");
+        String[] algorithmsToBeUsedInOrder = ConfigurationService.getProp("data.security.encoding.and.encryption.algorithms.to.use.for.sensitive.user.data").split(",");
         return extractEncodingAndEncryptionAlgorithms(algorithmsToBeUsedInOrder);
     }
 
 
     public static List<OrionEnumeration> getDecodingAndDecryptionAlgorithmsForSensitiveUserData() throws NoEncodingAndEncryptionAlgorithmsForUsernameProvidedException
     {
-        String[] algorithmsToBeUsedInOrder = InMemoryConfigurationService.getProp("data.security.decoding.and.decryption.algorithms.to.use.for.sensitive.user.data").split(",");
+        String[] algorithmsToBeUsedInOrder = ConfigurationService.getProp("data.security.decoding.and.decryption.algorithms.to.use.for.sensitive.user.data").split(",");
         return extractDecodingAndDecryptionAlgorithms(algorithmsToBeUsedInOrder);
     }
 
