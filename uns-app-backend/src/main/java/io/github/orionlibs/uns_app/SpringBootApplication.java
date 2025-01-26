@@ -4,11 +4,12 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.util.MinimalPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import io.github.orionlibs.api.system.APISystemSpringConfiguration;
+import io.github.orionlibs.core.registry.ModuleRegistrar;
 import io.github.orionlibs.utilities.UtilitiesSpringConfiguration;
 import java.util.TimeZone;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
@@ -27,8 +28,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @EnableScheduling
 @ComponentScan(basePackages = {"io.github.orionlibs.api"})
 @Import({SpringConfiguration.class,
-                UtilitiesSpringConfiguration.class,
-                APISystemSpringConfiguration.class})
+                UtilitiesSpringConfiguration.class})
 public class SpringBootApplication extends SpringBootServletInitializer implements WebMvcConfigurer
 {
     public static void main(String[] args)
@@ -71,5 +71,14 @@ public class SpringBootApplication extends SpringBootServletInitializer implemen
                         .allowedOrigins("*")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS", "websocket", "ws")
                         .allowedHeaders("*");
+    }
+
+
+    @Bean
+    public ModuleRegistrar moduleRegistrar(ApplicationContext applicationContext)
+    {
+        ModuleRegistrar moduleRegistrar = new ModuleRegistrar(applicationContext);
+        moduleRegistrar.registerModules();
+        return moduleRegistrar;
     }
 }
