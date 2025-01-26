@@ -16,6 +16,17 @@ import lombok.experimental.SuperBuilder;
 @Setter
 public class OrionAPIResponse implements Serializable
 {
-    private String errorCode;
-    private String errorMessage;
+    private OrionResponse.Error error;
+
+
+    @NoArgsConstructor
+    @SuperBuilder
+    @Getter
+    @Setter
+    static class Error implements Serializable
+    {
+        private Boolean hasErrors;
+        private String errorCode;
+        private String errorMessage;
+    }
 }

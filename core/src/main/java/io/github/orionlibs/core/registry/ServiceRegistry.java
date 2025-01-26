@@ -1,9 +1,10 @@
 package io.github.orionlibs.core.registry;
 
+import io.github.orionlibs.core.abstraction.OrionRegistry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-public class ServiceRegistry
+public class ServiceRegistry implements OrionRegistry
 {
     private static final ConcurrentMap<Class<?>, Object> services;
 

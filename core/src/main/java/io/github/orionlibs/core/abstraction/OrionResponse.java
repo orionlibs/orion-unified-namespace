@@ -19,10 +19,21 @@ public class OrionResponse implements Serializable
 {
     private Boolean hasErrors;
     private Boolean invalidPageNumber;
-    private String errorCode;
-    private String errorMessage;
+    private Error error;
     private Set<String> invalidFields;
     private Integer pageNumber;
     private Long totalNumberOfPages;
     private String authorities;
+
+
+    @NoArgsConstructor
+    @SuperBuilder
+    @Getter
+    @Setter
+    static class Error implements Serializable
+    {
+        private Boolean hasErrors;
+        private String errorCode;
+        private String errorMessage;
+    }
 }

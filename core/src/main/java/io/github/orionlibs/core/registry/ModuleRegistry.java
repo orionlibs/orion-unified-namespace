@@ -1,10 +1,11 @@
 package io.github.orionlibs.core.registry;
 
+import io.github.orionlibs.core.abstraction.OrionRegistry;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-public class ModuleRegistry
+public class ModuleRegistry implements OrionRegistry
 {
     private static final CopyOnWriteArrayList<ModuleData> modules;
 
