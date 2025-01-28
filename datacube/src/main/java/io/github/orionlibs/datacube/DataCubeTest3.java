@@ -43,19 +43,19 @@ public class DataCubeTest3
         DataStreamSink<Double> columnSum = recordStream
                         .filter(x -> x.movement != null)
                         .map(row -> row.movement)
-                        .windowAll(GlobalWindows.create()) // Process the entire stream
+                        .windowAll(GlobalWindows.create())
                         .trigger(CountTrigger.of(6141L))
                         .process(new ProcessAllWindowFunction<Double, Double, GlobalWindow>()
                         {
                             @Override
                             public void process(Context context, Iterable<Double> elements, Collector<Double> out)
                             {
-                                double sum = 0;
+                                double sum = 0.0d;
                                 for(Double movement : elements)
                                 {
                                     sum += movement;
                                 }
-                                out.collect(sum); // Emit the final sum
+                                out.collect(sum);
                             }
                         })
                         .addSink(new SinkFunction<>()
