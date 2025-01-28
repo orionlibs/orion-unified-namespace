@@ -1,5 +1,10 @@
 package io.github.orionlibs.datacube;
 
+import lombok.ToString;
+
+//Has to match the exact order of columns in the CSV file
+//@JsonPropertyOrder({"city","lat","lng","country","iso2", "adminName","capital","population"})
+@ToString
 public class SpotlightDataRow
 {
     public String empty;
