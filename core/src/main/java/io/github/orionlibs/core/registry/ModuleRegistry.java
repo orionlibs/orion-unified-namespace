@@ -12,16 +12,16 @@ public class ModuleRegistry implements OrionRegistry
     static
     {
         modules = new CopyOnWriteArrayList<>();
-        registerModule("core", "0.0.1");
+        register("core", "0.0.1");
     }
 
-    public static void registerModule(ModuleData moduleData)
+    public static void register(ModuleData moduleData)
     {
         modules.add(moduleData);
     }
 
 
-    public static void registerModule(String name, String version)
+    public static void register(String name, String version)
     {
         modules.add(new ModuleData(name, version));
     }

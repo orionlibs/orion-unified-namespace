@@ -8,6 +8,6 @@ public class UtilitiesSpringConfiguration
 {
     public UtilitiesSpringConfiguration()
     {
-        ModuleRegistry.registerModule("utilities", "0.0.1");
+        ModuleRegistry.register("utilities", "0.0.1");
     }
 }

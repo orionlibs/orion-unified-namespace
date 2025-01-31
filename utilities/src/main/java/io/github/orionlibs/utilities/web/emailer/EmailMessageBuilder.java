@@ -1,6 +1,6 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.core.configuration.ConfigurationService;
+import io.github.orionlibs.core.configuration.Config;
 import io.github.orionlibs.core.file_system.file.FileService;
 import jakarta.mail.BodyPart;
 import jakarta.mail.Message;
@@ -43,7 +43,7 @@ public class EmailMessageBuilder
                     else
                     {
                         URL url = new URL(dependencies.getAttachmentFileURL());
-                        String tempFolder = ConfigurationService.getProp("file.upload.temporary.path.on.aws.ec2.tomcat");
+                        String tempFolder = Config.getProp("file.upload.temporary.path.on.aws.ec2.tomcat");
                         try
                         {
                             FileService.deleteFile(tempFolder + dependencies.getAttachmentFileName());

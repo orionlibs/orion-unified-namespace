@@ -1,7 +1,7 @@
 package io.github.orionlibs.uns_app;
 
 import io.github.orionlibs.core.abstraction.Orion;
-import io.github.orionlibs.core.configuration.ConfigurationService;
+import io.github.orionlibs.core.configuration.Config;
 import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -17,14 +17,14 @@ public class SpringConfiguration
     public SpringConfiguration(Environment env)
     {
         loadSpringProfile(env.getActiveProfiles());
-        ConfigurationService.registerProp("default.timezone.for.printing", "GB", "");
+        Config.registerProp("default.timezone.for.printing", "GB", "");
         for(PropertySource<?> propertySource : ((AbstractEnvironment)env).getPropertySources())
         {
             if(propertySource instanceof EnumerablePropertySource)
             {
                 String[] propertyNames = ((EnumerablePropertySource<?>)propertySource).getPropertyNames();
                 Arrays.stream(propertyNames)
-                                .forEach(prop -> ConfigurationService.registerProp(prop, env.getProperty(prop), ""));
+                                .forEach(prop -> Config.registerProp(prop, env.getProperty(prop), ""));
             }
         }
     }

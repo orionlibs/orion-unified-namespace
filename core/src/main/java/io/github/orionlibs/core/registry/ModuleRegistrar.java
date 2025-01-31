@@ -21,7 +21,7 @@ public class ModuleRegistrar
         Map<String, Object> modules = applicationContext.getBeansWithAnnotation(Module.class);
         modules.forEach((beanName, bean) -> {
             Module moduleAnnotation = bean.getClass().getAnnotation(Module.class);
-            ModuleRegistry.registerModule(moduleAnnotation.name(), moduleAnnotation.version());
+            ModuleRegistry.register(moduleAnnotation.name(), moduleAnnotation.version());
         });
     }
 }

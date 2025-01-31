@@ -1,6 +1,6 @@
 package io.github.orionlibs.core.logger.tasks;
 
-import io.github.orionlibs.core.configuration.ConfigurationService;
+import io.github.orionlibs.core.configuration.Config;
 import io.github.orionlibs.core.logger.ConsoleLoggerService;
 import io.github.orionlibs.core.runnable.OrionJob;
 
@@ -21,8 +21,8 @@ public class LogUserActionTask implements OrionJob
 
     public void run()
     {
-        boolean logToTomcat = ConfigurationService.getBooleanProp("action.logging.to.tomcat.enable");
-        boolean logToDatabase = ConfigurationService.getBooleanProp("action.logging.to.database.enable");
+        boolean logToTomcat = Config.getBooleanProp("action.logging.to.tomcat.enable");
+        boolean logToDatabase = Config.getBooleanProp("action.logging.to.database.enable");
         if(logToTomcat || logToDatabase)
         {
             if(logToTomcat)

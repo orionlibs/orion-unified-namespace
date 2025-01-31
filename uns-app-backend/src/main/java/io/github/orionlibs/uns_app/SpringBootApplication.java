@@ -26,7 +26,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @org.springframework.boot.autoconfigure.SpringBootApplication
 @EnableWebMvc
 @EnableScheduling
-@ComponentScan(basePackages = {"io.github.orionlibs.api"})
+@ComponentScan(basePackages = {"io.github.orionlibs"})
 @Import({SpringConfiguration.class,
                 UtilitiesSpringConfiguration.class})
 public class SpringBootApplication extends SpringBootServletInitializer implements WebMvcConfigurer

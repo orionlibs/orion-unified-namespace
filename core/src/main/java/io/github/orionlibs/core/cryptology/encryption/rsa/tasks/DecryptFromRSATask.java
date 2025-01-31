@@ -1,6 +1,6 @@
 package io.github.orionlibs.core.cryptology.encryption.rsa.tasks;
 
-import io.github.orionlibs.core.configuration.ConfigurationService;
+import io.github.orionlibs.core.configuration.Config;
 import io.github.orionlibs.core.cryptology.encryption.EncryptionAlgorithm;
 import io.github.orionlibs.core.exception.Assert;
 import java.io.IOException;
@@ -18,13 +18,13 @@ public class DecryptFromRSATask
 {
     public static String run(String data) throws IOException, ClassNotFoundException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException
     {
-        return decryptData(data, (PrivateKey)ConfigurationService.getObjectProp("private.rsa.key"), null);
+        return decryptData(data, (PrivateKey)Config.getObjectProp("private.rsa.key"), null);
     }
 
 
     public static String run(String data, EncryptionAlgorithm encryptionAlgorithmToUse) throws IOException, ClassNotFoundException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException
     {
-        return decryptData(data, (PrivateKey)ConfigurationService.getObjectProp("private.rsa.key"), encryptionAlgorithmToUse);
+        return decryptData(data, (PrivateKey)Config.getObjectProp("private.rsa.key"), encryptionAlgorithmToUse);
     }
 
 

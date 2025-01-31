@@ -1,6 +1,6 @@
 package io.github.orionlibs.utilities.web.emailer;
 
-import io.github.orionlibs.core.configuration.ConfigurationService;
+import io.github.orionlibs.core.configuration.Config;
 import jakarta.mail.MessagingException;
 import jakarta.mail.NoSuchProviderException;
 import jakarta.mail.SendFailedException;
@@ -14,7 +14,7 @@ public class EmailSender
         try
         {
             Transport transport = senderData.getTransport();
-            transport.connect(senderData.getSMTPHost(), ConfigurationService.getIntegerProp("email.administrator.email.address.smtp.port"), senderData.getEmailAccountUsername(), senderData.getEmailAccountPassword());
+            transport.connect(senderData.getSMTPHost(), Config.getIntegerProp("email.administrator.email.address.smtp.port"), senderData.getEmailAccountUsername(), senderData.getEmailAccountPassword());
             transport.sendMessage(senderData.getMessageToSend(), senderData.getMessageToSend().getAllRecipients());
             transport.close();
             emailWasSentSuccessfully = true;
