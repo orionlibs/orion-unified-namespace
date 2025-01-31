@@ -7,16 +7,12 @@ import org.apache.flink.connector.file.src.FileSource;
 import org.apache.flink.connector.file.src.reader.TextLineInputFormat;
 import org.apache.flink.core.fs.Path;
 import org.apache.flink.streaming.api.datastream.DataStream;
-import org.apache.flink.streaming.api.datastream.DataStreamSink;
+import org.apache.flink.streaming.api.datastream.KeyedStream;
+import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.functions.sink.SinkFunction;
-import org.apache.flink.streaming.api.functions.windowing.ProcessAllWindowFunction;
-import org.apache.flink.streaming.api.windowing.assigners.GlobalWindows;
-import org.apache.flink.streaming.api.windowing.triggers.CountTrigger;
-import org.apache.flink.streaming.api.windowing.windows.GlobalWindow;
-import org.apache.flink.util.Collector;
+import org.apache.flink.util.CloseableIterator;
 
-public class DataCubeTest2
+public class DataCubeTest4
 {
     public static void main(String[] args)
     {
@@ -25,7 +21,8 @@ public class DataCubeTest2
         String path = "D:/temp/sample2.csv";
         FileSource<String> source = FileSource.forRecordStreamFormat(new TextLineInputFormat(), new Path(path)).build();
         DataStream<String> rawStream = env.fromSource(source, WatermarkStrategy.noWatermarks(), "CSVFile1");
-        DataStream<SpotlightDataRow> recordStream = rawStream.filter(line -> !line.startsWith(",FinancialYear")).map(line -> {
+        DataStream<SpotlightDataRow> recordStream = rawStream.filter(line -> !line.startsWith(",FinancialYear"))
+                        .map(line -> {
                             SpotlightDataRow csvRow = new SpotlightDataRow();
                             String[] fields = line.split(",");
                             csvRow.empty = fields[0];
@@ -43,43 +40,17 @@ public class DataCubeTest2
                         })
                         .returns(TypeInformation.of(SpotlightDataRow.class));
         recordStream = recordStream.filter(x -> x.movement != null);
-        DataStreamSink<Double> columnSum = recordStream.map(row -> row.movement)
-                        .windowAll(GlobalWindows.create())
-                        .trigger(CountTrigger.of(6141L))
-                        .process(new ProcessAllWindowFunction<Double, Double, GlobalWindow>()
-                        {
-                            @Override
-                            public void process(Context context, Iterable<Double> elements, Collector<Double> out)
-                            {
-                                double sum = 0.0d;
-                                for(Double movement : elements)
-                                {
-                                    sum += movement;
-                                }
-                                out.collect(sum);
-                            }
-                        })
-                        .addSink(new SinkFunction<>()
-                        {
-                            @Override
-                            public void invoke(Double value, Context context)
-                            {
-                                System.out.println("Final sum of movement column: " + value);
-                            }
-                        });
-        //.reduce(Double::sum)
-        //.returns(Double.class);
-        /*columnSum.addSink(new SinkFunction<Double>()
+        KeyedStream<SpotlightDataRow, String> keyedStream = recordStream.keyBy(record -> record.opExCategory);
+        SingleOutputStreamOperator<SpotlightDataRow> aggregatedStream = keyedStream.reduce((row1, row2) -> {
+            row1.movement += row2.movement;
+            return row1;
+        });
+        try(CloseableIterator<SpotlightDataRow> resultIterator = aggregatedStream.executeAndCollect())
         {
-            @Override
-            public void invoke(Double value, Context context)
+            while(resultIterator.hasNext())
             {
-                System.out.println("Sum of movement column: " + value);
+                System.out.println(resultIterator.next());
             }
-        });*/
-        try
-        {
-            env.execute("CSV Processing Job");
         }
         catch(Exception e)
         {

@@ -2,6 +2,7 @@ package io.github.orionlibs.datacube;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.flink.api.common.RuntimeExecutionMode;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
@@ -12,6 +13,7 @@ public class DataCubeTest
     public static void main(String[] args)
     {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        env.setRuntimeMode(RuntimeExecutionMode.BATCH);
         List<Person> people = new ArrayList<Person>();
         people.add(new Person("Fred", 35));
         people.add(new Person("Wilma", 35));

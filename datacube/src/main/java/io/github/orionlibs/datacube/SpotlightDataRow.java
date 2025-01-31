@@ -10,6 +10,7 @@ public class SpotlightDataRow
     public String empty;
     public String financialYear;
     public String opExCategory;
+    public String department;
     public String emsLevel1;
     public String emsLevel2;
     public String emsLevel3;
