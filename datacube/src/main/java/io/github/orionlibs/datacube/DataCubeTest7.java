@@ -21,7 +21,7 @@ public class DataCubeTest7
         FileSource<String> source = FileSource.forRecordStreamFormat(new TextLineInputFormat(), new Path(path)).build();
         DataStream<String> rawStream = env.fromSource(source, WatermarkStrategy.noWatermarks(), "CSVFile1");
         DataStream<SpotlightDataRow> recordStream = rawStream
-                        .filter(line -> !line.startsWith(",FinancialYear,OpEx Category"))
+                        .filter(line -> !line.startsWith(",FinancialYear"))
                         .map(line -> {
                             SpotlightDataRow csvRow = new SpotlightDataRow();
                             String[] fields = line.split(",");
