@@ -133,7 +133,7 @@ This is the method to set the digit displayed.
 */
 displayValue: function(value, bDecimalPoint) {
     var self = this;
-    if(!c_aNumberSegments.hasOwnProperty(value)) return;
+    if(value === null || value === undefined || !c_aNumberSegments.hasOwnProperty(value)) return;
     self.options.value = value;
     var segments = self._getSegments(value);
     self.jqSegments.children().each(function(index, element) {
@@ -319,7 +319,7 @@ If the value is null, then an empty string is returned.  Otherwise, the value is
 and returned in string form.
 */
 _createValueString: function (value) {
-    if (!value) return "";
+    if (value === null || value === undefined) return "";
     if (this.options.decimalPlaces < 0) return value.toString();
 
     var fValue = parseFloat(value, 10);
